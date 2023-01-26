@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +21,10 @@ input:checked ~ .dot {
 </style>
 <link rel="stylesheet" href="../dist/output.css">
 <script src="https://kit.fontawesome.com/485af02044.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <body>
             <!-- nav bar -->
-<div>
+<div class="nav-bar">
     <div class="px-5 container mx-auto flex justify-between items-center  py-5">
         <div  class=" flex items-center space-x-2 lg:space-x-6">
             <ul>
@@ -36,14 +37,17 @@ input:checked ~ .dot {
                     </svg>
                 </li>
             </ul>
-            <!-- ့hidden -->
-            <ul class="md:space-x-2 text-blue-700 font-bold md:font-normal md:text-slate-900 lg:space-x-6  md:flex  md:static bg-slate-50 md:bg-transparent  fixed z-10  left-6 sm:left-44 right-0 w-96 md:w-40 px-5 leading-10  rounded-xl top-5  ">
-                <li class="md:hover:bg-slate-100 rounded-md px-2 cursor-pointer">Features</li>
-                <li class="md:hover:bg-slate-100 rounded-md px-2  cursor-pointer">Testimonials</li>
-                <li class="md:hover:bg-slate-100 rounded-md px-2  cursor-pointer">Pricing</li>
+            <!-- ့hidden  top-5-->
+            <ul class="menu md:space-x-2 pt-7 sm:pt-0 text-blue-700 font-bold md:font-normal md:text-slate-900 lg:space-x-6  md:flex  md:static bg-slate-200 md:bg-transparent  fixed z-10  left-12 sm:left-80 right-0 max-w-xs md:w-40 px-5 leading-10  rounded-xl -top-96  "> 
+                <div class="close-menu absolute cursor-pointer text-2xl left-72 md:hidden">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+         <a href="#feature"><li class="md:hover:bg-slate-300 hover:border-b-2 hover:transition-opacity hover:border-blue-500 close-mobile-slide rounded-md  w-20 md:w-auto  px-2 cursor-pointer">Features</li></a>
+         <a href="#testimonial"><li class="md:hover:bg-slate-300 close-mobile-slide rounded-md  w-24 md:w-auto  px-2  cursor-pointer">Testimonials</li></a>
+         <a href="#pricing"><li class="md:hover:bg-slate-300 close-mobile-slide rounded-md   w-20 md:w-auto px-2  cursor-pointer">Pricing</li></a>
                 <hr class="md:hidden">
-                <div class="flex justify-between md:flex-col md:left-32  md:absolute md:hidden">
-                    <div class="mt-2 px-2">Sign in</div>
+                <div class="flex justify-between  md:left-32  md:absolute md:hidden">
+                    <div class="mt-2  px-2 ">Sign in</div>
                     <!-- darkmode -->
                     <div>
                         <!-- Toggle A -->
@@ -75,7 +79,7 @@ input:checked ~ .dot {
         </div>
        
         <div class="flex  items-center space-x-2 md:space-x-1 lg:space-x-6">
-            <button class="hover:bg-slate-100 rounded-md px-2 py-1 z-0 md:flex hidden">Sign in</button>
+            <button class="hover:bg-slate-300 rounded-md px-2 py-2 z-0 md:flex hidden">Sign in</button>
            
             <button class=" bg-blue-700 scale-90 md:scale-100 hover:bg-blue-600 text-white font-bold px-3 py-2 rounded-full    flex flex-row "><span class="mx-1">Get started</span> <span class="hidden lg:flex">today</span> </button>
             <!-- dark mode -->
@@ -87,7 +91,7 @@ input:checked ~ .dot {
                 </div>
             </button>
             <!-- menu icon -->
-            <div class="flex md:hidden border w-10 h-9 bg-blue-700 text-white cursor-pointer hover:bg-blue-800 hover:shadow-lg rounded-full justify-center items-center">
+            <div class="open-menu flex md:hidden border w-10 h-9 bg-blue-700 text-white cursor-pointer hover:bg-blue-800 hover:shadow-lg rounded-full justify-center items-center">
                 <i class="text-xl  fa-solid fa-bars"></i>
             </div>
         </div>
@@ -240,11 +244,11 @@ input:checked ~ .dot {
     </div>
 
     <!-- Features Section h-1000px -->
-    <section class="overflow-hidden pb-[600px] lg:pb-[200px]   min-w-screen  bg-[url('/assests/image/bg.webp')] bg-cover object-center py-14  ">
+    <section id="feature" class="overflow-hidden pb-[600px] lg:pb-[200px]   min-w-screen  bg-[url('../assests/image/bg.webp')] bg-cover object-center py-14  ">
         <div class="container mx-auto relative">
             <div class="mx-auto max-w-4xl py-28">
-                <h1 class="text-center text-5xl text-slate-50" >Everything You need to run your books.</h1>
-                <h6 class="text-center mx-auto mt-6 max-w-xl text-slate-50">
+                <h1 class="text-center text-5xl text-slate-100" >Everything You need to run your books.</h1>
+                <h6 class="text-center mx-auto mt-6 max-w-xl text-slate-100">
                     Well everything you need if  you aren't that picky about minor details like tax compliance. 
                 </h1>
             </div>
@@ -333,34 +337,7 @@ input:checked ~ .dot {
     </div>
     </section>
  
-    <!-- <section class="  min-w-screen min-h-screen bg-[url('/assests/image/bg.webp')] bg-cover object-center py-36 ">
-            <div class="container mx-auto">
-                <div class="mx-auto max-w-4xl py-28">
-                    <h1 class="text-center text-5xl text-slate-50" >Everything You need to run your books.</h1>
-                    <h6 class="text-center mx-auto mt-6 max-w-xl text-slate-50">
-                        Well everything you need if  you aren't that picky about minor details like tax compliance. 
-                    </h1>
-            </div>
-
-            <div class="bg-red-500  bg-scroll mx-auto overflow-x-scroll ">
-                <div class="w-[600px] flex justify-between ">
-                    <div class="bg-yellow-100">
-                        <button>Payroll</button>
-                    </div>
-                    <div class="bg-green-200">
-                        <button>Claim expenses</button>
-                    </div>
-                    <div class="bg-cyan-300">
-                        <button>Vat handling</button>
-                    </div>
-                    <div>
-                        <button>Reporting</button>
-                    </div>
-                </div>
-                
-            </div>
-
-    </section> -->
+    
     <section class=" pb-8  overflow-hidden">
 
         <div class=" container px-5  mx-auto py-20">
@@ -494,7 +471,7 @@ input:checked ~ .dot {
     </section>
 
     <!-- textimonials -->
-    <section>
+    <section id="testimonial">
         <div class="container mx-auto text-center py-20">
             <h1 class="text-4xl mb-7">Loved by businesses worldwide</h1>
             <p class="text-lg max-w-7xl leading-9 mx-auto">Our software is so simple that people can’t help but fall in love with it. Simplicity is easy when you just skip tons of mission-critical features.</p>
@@ -602,7 +579,7 @@ input:checked ~ .dot {
     </section>
     
     <!-- Pricing Section -->
-    <section class="bg-slate-900 pb-48">
+    <section id="pricing" class="bg-slate-900 pb-48">
         <div>
             <div class="text-center py-20">
                 <h1 class="text-4xl mb-7 text-white font-bold ">
@@ -689,7 +666,7 @@ input:checked ~ .dot {
     </section>
     <!-- Questions  -->
     <section>
-       <div class="relative">
+       <div class="relative ">
             <img alt="" src="../assests/image/background-faqs.55d2e36a.jpg" class="-z-10 absolute w-full h-[1700px] sm:h-[1600px] md:h-[1500px] lg:h-[1150px] xl:h-[1100px] 3xl:h-[900px]" >
     
         <div class="">
@@ -755,9 +732,9 @@ input:checked ~ .dot {
                     </div>
                     <div class="container mx-auto mt-5 ">
                         <ul class="flex justify-center space-x-6">
-                            <li class=" cursor-pointer">Features</li>
-                            <li class=" cursor-pointer">Testimonials</li>
-                            <li class=" cursor-pointer">Pricing</li>
+                        <a href="#feature"><li class=" cursor-pointer">Features</li></a> 
+                        <a href="#testimonial"><li class=" cursor-pointer">Testimonials</li></a> 
+                        <a href="#pricing"><li class=" cursor-pointer">Pricing</li></a> 
                         </ul>
                     </div>
                     <div class="container mx-auto px-5 mt-20 pt-10 border-t-2 bg-transparent py-10 sm:py-10">
@@ -767,7 +744,7 @@ input:checked ~ .dot {
                             <span class="text-xl text-slate-500 hover:text-slate-900 cursor-pointer "><i class="fa-brands fa-github"></i></span>
                         </div>
                         <div class="text-sm">Copyright © 2023 TaxPal. All rights reserved</div>
-                        <div class=" hidden sm:flex space-x-5">
+                        <div class=" hidden   sm:flex space-x-5">
                             <span class="text-xl text-slate-500 hover:text-slate-900 cursor-pointer "><i class="fa-brands fa-twitter"></i></span>
                             <span class="text-xl text-slate-500 hover:text-slate-900 cursor-pointer "><i class="fa-brands fa-github"></i></span>
                         </div>
@@ -914,6 +891,44 @@ let Image1 = document.querySelector(".img1")
             Image1.style.transition="0.3s"
          })
 
+        
+    // menu
+let menu = document.querySelector(".menu");
+let openMenu = document.querySelector(".open-menu")
+let closeMenu = document.querySelector(".close-menu")
+
+openMenu.addEventListener("click",()=>{
+    menu.style.top="8%";
+    menu.style.transition="0.1s";
+    menu.style.duration ="0.1s"
+})
+closeMenu.addEventListener("click",()=>{
+    menu.style.top="-100%"
+})
+
+// waypoints
+let navBar = document.querySelector(".nav-bar")
+var waypoint = new Waypoint({
+  element: document.getElementById('feature'),
+  handler: function(direction) {
+    if(direction === "down"){
+    navBar.classList.add("fixed","bg-slate-50","shadow-md","shadow-slate-500","w-full","z-30","bg-opacity-95");
+    }
+    else{
+    navBar.classList.remove("fixed","bg-slate-50","shadow-md","shadow-slate-500","w-full","z-30","bg-opacity-95");
+        
+    }
+    
+  },
+  offset: '5%'
+})
+// mobile slide close
+let closeMobileSlide = document.querySelectorAll(".close-mobile-slide");
+for( let i = 0 ; i< closeMobileSlide.length;i++){
+    closeMobileSlide[i].addEventListener("click",()=>{
+        menu.style.top="-100%"
+    })
+}
     </script>
 </body>
 </html>
