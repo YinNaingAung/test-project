@@ -22,10 +22,11 @@ input:checked ~ .dot {
 <link rel="stylesheet" href="../dist/output.css">
 <script src="https://kit.fontawesome.com/485af02044.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <body>
             <!-- nav bar -->
-<div class="nav-bar">
-    <div class="px-5 container mx-auto flex justify-between items-center  py-5">
+<div class="nav-bar  animate__animated">
+    <div class="px-5  container mx-auto flex justify-between items-center  py-5">
         <div  class=" flex items-center space-x-2 lg:space-x-6">
             <ul>
                 <li>
@@ -42,11 +43,12 @@ input:checked ~ .dot {
                 <div class="close-menu absolute cursor-pointer text-2xl left-72 md:hidden">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
-         <a href="#feature"><li class="md:hover:bg-slate-300 hover:border-b-2 hover:transition-opacity hover:border-blue-500 close-mobile-slide rounded-md  w-20 md:w-auto  px-2 cursor-pointer">Features</li></a>
-         <a href="#testimonial"><li class="md:hover:bg-slate-300 close-mobile-slide rounded-md  w-24 md:w-auto  px-2  cursor-pointer">Testimonials</li></a>
-         <a href="#pricing"><li class="md:hover:bg-slate-300 close-mobile-slide rounded-md   w-20 md:w-auto px-2  cursor-pointer">Pricing</li></a>
-                <hr class="md:hidden">
-                <div class="flex justify-between  md:left-32  md:absolute md:hidden">
+         <li class="md:hover:bg-slate-300  close-mobile-slide rounded-md  w-20 md:w-auto  px-2 cursor-pointer"><a href="#feature">Features</a></li>
+         <li class="md:hover:bg-slate-300 close-mobile-slide rounded-md  w-24 md:w-auto  px-2  cursor-pointer"><a href="#testimonial">Testimonials</a></li>
+        <li class="md:hover:bg-slate-300 mb-5 md:mb-0 close-mobile-slide rounded-md   w-20 md:w-auto px-2  cursor-pointer"> <a href="#pricing">Pricing</a></li>
+                <hr class="w-full h-1 bg-slate-300">
+                <!-- <div class="w-full h-1 bg-slate-900"></div> -->
+                <div class="flex justify-between  md:left-32 mt-4  md:absolute md:hidden">
                     <div class="mt-2  px-2 ">Sign in</div>
                     <!-- darkmode -->
                     <div>
@@ -103,7 +105,7 @@ input:checked ~ .dot {
     <!-- first section -->
     <div>
         <div class="container  md:max-w-[900px] max-w-[600px] mx-auto text-center py-36 ">
-            <h1 class="text-5xl   md:text-7xl font-bold leading-tight my-4 w-auto ">
+            <h1 class="text-5xl reveal   md:text-7xl font-bold leading-tight my-4 w-auto ">
                 Accounting 
                 <span class="relative inline-block xl:inline ">
                     <span class="">
@@ -116,23 +118,23 @@ input:checked ~ .dot {
                
                 for small businesses.
             </h1>
-            <p class="max-w-lg mx-auto my-8">
+            <p class="reveal max-w-lg mx-auto my-8">
                 Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited
             </p>
-            <button class="bg-slate-900 border border-slate-900 text-white rounded-full px-4 py-2 mx-4">Get 6 months free</button>
-            <button class="rounded-full px-4 py-2 border"><i class="text-blue-700 fa-solid fa-play"></i>  Watch video</button>
+            <button class="reveal bg-slate-900 border border-slate-900 text-white rounded-full px-4 py-2 mx-4">Get 6 months free</button>
+            <button class="reveal rounded-full px-4 py-2 border"><i class="text-blue-700 fa-solid fa-play"></i>  Watch video</button>
             
         </div>
-        <div class="container mb-5 mx-auto">
+        <div class="reveal container mb-5 mx-auto">
               <h1 class="text-center text-xl">Trusted by these six companies so far</h1>  
         </div>
 
-        <!-- design -->
+        <!-- logo -->
     
         <div class=" container mb-20 px-3   sm:px-20  mx-auto grid sm:grid-cols-1 lg:grid-cols-2  grid-cols-2 gap-y-0 sm:gap-y-5 gap-x-5 sm:gap-x-8 lg:gap-x-24 xl:gap-x-8 ">
             <div class="">
                 <ul class="flex flex-col sm:flex-row  justify-between gap-y-7 md:gap-y-0  gap-x-7">
-                    <li class=" mx-auto ">
+                    <li class="reveal1 mx-auto ">
                         <svg  class=" scale-90  sm:scale-110" width="158" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)" fill="#334155">
                               <path
@@ -149,7 +151,7 @@ input:checked ~ .dot {
                         <!-- w-158 h-48 -->
                     </li>
      
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="105" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M18 4 0 10v19.5l6 2V37l18 6V11.5l-6 2V4ZM8 32.167 18 35.5V15.608l4-1.333v25.95L8 35.56v-3.393Z" fill="#334155" />
@@ -165,7 +167,7 @@ input:checked ~ .dot {
                         </svg> 
                     </li>
     
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="127" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                               d="m3.31 28.903 14.75-15.816L14.749 10 0 25.816l3.31 3.087ZM5.792 39 20.54 23.184l-3.31-3.087L2.482 35.913 5.792 39Zm31.261-18.216a3.87 3.87 0 0 0-1.441-1.115c-.594-.276-1.166-.414-1.718-.414-.284 0-.572.025-.864.075a2.23 2.23 0 0 0-.79.289c-.234.142-.43.326-.59.551-.158.226-.237.514-.237.865 0 .3.062.552.188.752.125.2.309.376.551.527.242.15.53.288.865.413.334.126.71.255 1.128.389.602.2 1.229.422 1.88.664a7.03 7.03 0 0 1 1.78.965 5.07 5.07 0 0 1 1.329 1.492c.35.593.526 1.333.526 2.219 0 1.019-.188 1.9-.564 2.644a5.274 5.274 0 0 1-1.516 1.843 6.499 6.499 0 0 1-2.181 1.078 9.17 9.17 0 0 1-2.532.35c-1.27 0-2.499-.22-3.685-.663-1.187-.443-2.173-1.074-2.959-1.893l2.808-2.858c.435.535 1.007.982 1.717 1.341.71.36 1.417.54 2.119.54.317 0 .626-.034.927-.101.301-.067.564-.176.79-.326.225-.15.405-.351.539-.602.134-.25.2-.551.2-.902 0-.334-.083-.619-.25-.853a2.45 2.45 0 0 0-.715-.639 5.76 5.76 0 0 0-1.153-.526c-.46-.159-.982-.33-1.567-.514a14.963 14.963 0 0 1-1.667-.652 5.58 5.58 0 0 1-1.454-.965 4.471 4.471 0 0 1-1.028-1.43c-.259-.559-.388-1.24-.388-2.042 0-.986.2-1.83.601-2.532.39-.689.93-1.28 1.58-1.73a6.786 6.786 0 0 1 2.206-.99c.81-.208 1.645-.314 2.482-.314 1.002 0 2.026.184 3.07.552 1.045.368 1.96.91 2.746 1.63l-2.733 2.882Zm9.677 3.736v4.763c0 .585.113 1.023.338 1.316.226.292.631.439 1.216.439.2 0 .414-.017.64-.05.194-.025.383-.075.563-.15l.05 3.007c-.283.1-.643.188-1.077.264a7.63 7.63 0 0 1-1.304.112c-.836 0-1.538-.104-2.106-.313-.568-.209-1.023-.51-1.366-.902a3.54 3.54 0 0 1-.74-1.404 6.804 6.804 0 0 1-.225-1.818V24.52h-2.006v-3.084h1.98v-3.284h4.037v3.284h2.933v3.084H46.73Zm12.234 3.96h-.527c-.451 0-.906.021-1.366.063-.46.042-.87.122-1.228.238a2.27 2.27 0 0 0-.89.514c-.234.226-.351.523-.351.89 0 .234.054.435.163.602.108.167.246.3.413.401.167.1.36.171.577.213a3.3 3.3 0 0 0 .627.063c.835 0 1.474-.23 1.917-.69.443-.46.665-1.082.665-1.867v-.427Zm-7.546-5.34a7.2 7.2 0 0 1 2.57-1.579 8.805 8.805 0 0 1 2.995-.526c1.053 0 1.943.13 2.67.389.727.259 1.316.66 1.767 1.203.452.543.782 1.228.99 2.056.21.827.314 1.809.314 2.945v6.293h-3.76v-1.329h-.076c-.317.518-.798.92-1.441 1.203a5.125 5.125 0 0 1-2.093.426 6.403 6.403 0 0 1-1.555-.2 4.554 4.554 0 0 1-1.466-.652 3.53 3.53 0 0 1-1.09-1.203c-.285-.502-.427-1.12-.427-1.855 0-.903.247-1.63.74-2.181.493-.552 1.128-.978 1.905-1.279.777-.3 1.642-.501 2.595-.601.952-.1 1.88-.151 2.782-.151v-.2c0-.619-.217-1.074-.651-1.367-.435-.292-.97-.439-1.605-.439a3.99 3.99 0 0 0-1.692.377 5.4 5.4 0 0 0-1.392.902l-2.08-2.231v-.001Zm18.688 1.38v4.763c0 .585.112 1.023.338 1.316.225.292.63.439 1.216.439.2 0 .413-.017.639-.05.226-.034.414-.084.564-.15l.05 3.007a6.88 6.88 0 0 1-1.078.264c-.43.075-.866.112-1.303.112-.836 0-1.538-.104-2.106-.313-.568-.209-1.024-.51-1.366-.902a3.537 3.537 0 0 1-.74-1.404 6.808 6.808 0 0 1-.226-1.818V24.52H64.09v-3.084h1.98v-3.284h4.037v3.284h2.933v3.084H70.106Zm9.325-7.07c0 .318-.063.614-.188.89-.12.268-.29.51-.501.715a2.44 2.44 0 0 1-1.667.652c-.669 0-1.229-.222-1.68-.665a2.15 2.15 0 0 1-.677-1.592c0-.3.059-.589.176-.865.117-.275.284-.514.501-.714.217-.2.468-.364.752-.489s.593-.188.928-.188a2.445 2.445 0 0 1 1.667.652c.209.2.376.439.501.714.126.276.188.573.188.89ZM75.02 33.92V21.437h4.111v12.485H75.02v-.002Zm15.273-8.448a2.496 2.496 0 0 0-.953-.727 2.92 2.92 0 0 0-1.228-.275c-.435 0-.828.087-1.179.263a2.86 2.86 0 0 0-.902.702c-.25.292-.447.63-.59 1.015-.143.393-.215.81-.212 1.228 0 .435.067.844.2 1.229a3 3 0 0 0 .59 1.015c.258.293.568.522.927.69.36.167.765.25 1.216.25.418 0 .831-.08 1.24-.238.41-.159.74-.389.99-.69l2.282 2.783c-.518.502-1.186.894-2.005 1.178-.84.288-1.72.432-2.608.427a8.229 8.229 0 0 1-2.757-.452 6.361 6.361 0 0 1-2.219-1.316 6.18 6.18 0 0 1-1.479-2.093c-.36-.819-.539-1.746-.539-2.783 0-1.02.18-1.938.54-2.757a6.181 6.181 0 0 1 1.478-2.093 6.519 6.519 0 0 1 2.219-1.33 7.951 7.951 0 0 1 5.352.001c.41.142.786.317 1.128.526.343.21.64.439.89.69l-2.381 2.757Zm15.091 8.449-6.593-8.173h-.05v8.173h-4.212V16.17h4.212v7.22h.075l6.343-7.22h5.364l-7.646 8.173 8.098 9.577h-5.591v.001Zm11.206-16.47c0 .317-.062.613-.188.89-.12.268-.29.51-.501.714a2.445 2.445 0 0 1-1.667.652c-.669 0-1.229-.222-1.68-.665a2.152 2.152 0 0 1-.677-1.592c0-.3.059-.589.176-.865.117-.275.284-.514.501-.714.217-.2.468-.364.752-.489s.593-.188.928-.188a2.445 2.445 0 0 1 1.667.652c.209.2.376.439.501.714.126.276.188.573.188.89v.001Zm-4.412 16.47V21.436h4.111v12.485h-4.111Zm11.833-9.401v4.763c0 .585.112 1.023.338 1.316.226.292.631.439 1.216.439.2 0 .414-.017.639-.05.194-.024.384-.075.564-.15l.05 3.007a6.88 6.88 0 0 1-1.078.264c-.43.075-.866.112-1.303.112-.836 0-1.538-.104-2.106-.313-.568-.209-1.024-.51-1.366-.902a3.535 3.535 0 0 1-.74-1.404 6.84 6.84 0 0 1-.225-1.818V24.52h-2.006v-3.084h1.981v-3.284h4.036v3.284h2.933v3.084h-2.933Z"
@@ -177,7 +179,7 @@ input:checked ~ .dot {
             
             <div>
                 <ul class="flex flex-col sm:flex-row   lg:justify-between gap-y-7 md:gap-y-0 gap-x-7 ">
-                    <li  class=" mx-auto">
+                    <li  class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="138" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)" fill="#334155">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -197,7 +199,7 @@ input:checked ~ .dot {
                         </svg>
                     </li>
      
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="136" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)" fill="#334155">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -219,7 +221,7 @@ input:checked ~ .dot {
                            
                     </li>
     
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="147" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -244,114 +246,118 @@ input:checked ~ .dot {
     </div>
 
     <!-- Features Section h-1000px -->
-    <section id="feature" class="overflow-hidden pb-[600px] lg:pb-[200px]   min-w-screen  bg-[url('../assests/image/bg.webp')] bg-cover object-center py-14  ">
-        <div class="container mx-auto relative">
-            <div class="mx-auto max-w-4xl py-28">
-                <h1 class="text-center text-5xl text-slate-100" >Everything You need to run your books.</h1>
-                <h6 class="text-center mx-auto mt-6 max-w-xl text-slate-100">
-                    Well everything you need if  you aren't that picky about minor details like tax compliance. 
-                </h1>
+    <section id="feature" >
+        <div class="overflow-hidden pb-[600px] lg:pb-[200px]   min-w-screen  bg-[url('../assests/image/bg.webp')] bg-cover object-center py-14  ">
+            <!-- title -->
+            <div class="container mx-auto relative">
+                <div class="mx-auto max-w-4xl py-28">
+                    <h1 class=" reveal text-center text-5xl text-slate-100" >Everything You need to run your books.</h1>
+                    <h6 class=" reveal text-center mx-auto mt-6 max-w-xl text-slate-100">
+                        Well everything you need if  you aren't that picky about minor details like tax compliance. 
+                    </h1>
+                </div>
             </div>
-        </div>
 
-        <div class="container mx-auto ">
+            <!-- box -->
+            <div class="container mx-auto ">
+                <!-- second container start -->
+                <div class="pl-3 xs:pl-0 lg:px-0 grid  lg:grid-cols-2  container  rounded-t-md mx-auto   "> 
+                    <!-- text section start -->
+                    <div class="">
+                        <div class=" bg-blue-500 rounded-xl lg:rounded-0  mx-auto h-44 lg:bg-transparent pb-36 pt-10  lg:px-0 lg:pb-0 lg:pt-0">
+                            <div class="   w-[65%] h-16 sm:h-auto xs:w-auto sm:w-auto    sm:relative  overflow-x-scroll sm:overflow-x-hidden  lg:w-auto">
+                                <ul class="px-5  sm:px-0 sm:overflow-x-hidden w tabs w-[900px] xs:w-auto sm:w-auto  lg:pl-5 lg:ml- lg:mt-16  flex sm:justify-center  items-center lg:flex-col space-x-6 lg:space-x-0 ">
+                                    <!-- text for payroll -->
+                                    <li id="payroll"  class=" 2xl:rounded-xl lg:bg-auto flex justify-center rounded-full   w-[100px] lg:h-auto lg:rounded-none lg:w-auto  lg:block 
+                                            live  sm:hover:bg-blue-50 cursor-pointer    sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl  ">
+                                        <button  class="color h-10 text-md  lg:text-xl text-center lg:text-left text-slate-50  w-50 px-6 lg:px-0 lg:w-0 lg:mb-2 rounded-3xl ">
+                                            Payroll     
+                                        </button>
+                                        <p class=" text-slate-50 text-sm hidden max-w-xl lg:flex ">Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
+                                    </li>
+                                    
+                                    <!-- text for claim -->
+                                    <li id="expenses"  class="2xl:rounded-xl   lg:bg-auto flex justify-center items-center rounded-full  h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block  
+                                    sm:hover:bg-blue-50  cursor-pointer  sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl ">
+                                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
+                                        Claim expenses   
+                                        </button>
+                                        <p class="text-slate-50 text-sm hidden max-w-xl  lg:flex">All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
+                                    </li>  
+                                
+                                    <!-- text for vat -->
+                                    <li id="vat" class="2xl:rounded-xl  lg:bg-auto flex justify-center items-center rounded-full h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block
+                                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
+                                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
+                                    VAT handling
+                                        </button>
+                                        <p class="text-slate-50 text-sm hidden max-w-xl lg:flex">
+                                            We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.
+                                        </p>
+                                    </li>
 
-        
-        <div class="pl-3 xs:pl-0 lg:px-0 grid  lg:grid-cols-2  container  rounded-t-md mx-auto   "> 
-            <div class=" ">
-            <div class=" bg-blue-500 rounded-xl lg:rounded-0  mx-auto h-44 lg:bg-transparent pb-36 pt-10  lg:px-0 lg:pb-0 lg:pt-0">
-               <div class="   w-[65%] h-16 sm:h-auto xs:w-auto sm:w-auto    sm:relative  overflow-x-scroll sm:overflow-x-hidden  lg:w-auto">
-                <ul class="px-5  sm:px-0 sm:overflow-x-hidden w tabs w-[900px] xs:w-auto sm:w-auto  lg:pl-5 lg:ml- lg:mt-16  flex sm:justify-center  items-center lg:flex-col space-x-6 lg:space-x-0 ">
-                  
-                    <li id="payroll"  class=" 2xl:rounded-xl lg:bg-auto flex justify-center rounded-full   w-[100px] lg:h-auto lg:rounded-none lg:w-auto  lg:block 
-                     live  sm:hover:bg-blue-50 cursor-pointer    sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl  ">
-                        <button  class="color h-10 text-md  lg:text-xl text-center lg:text-left text-slate-50  w-50 px-6 lg:px-0 lg:w-0 lg:mb-2 rounded-3xl ">
-                        Payroll     
-                        </button>
-                         <p  class=" text-slate-50 text-sm hidden max-w-xl lg:flex ">Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
- 
-                    </li>
-                    
-                   
-                    <li id="expenses"  class="2xl:rounded-xl   lg:bg-auto flex justify-center items-center rounded-full  h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block  
-                    sm:hover:bg-blue-50  cursor-pointer  sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl ">
-                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
-                         Claim expenses   
-                        </button>
-                        <p class="text-slate-50 text-sm hidden max-w-xl  lg:flex">All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
-                    </li>  
-                   
-                   
-                    <li id="vat" class="2xl:rounded-xl  lg:bg-auto flex justify-center items-center rounded-full h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block
-                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
-                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
-                       VAT handling
-                        </button>
-                        <p class="text-slate-50 text-sm hidden max-w-xl lg:flex">
-                            We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.
-                        </p>
-                    </li>
-
-                    <li id="report"  class="2xl:rounded-xl lg:bg-auto flex justify-center items-center rounded-full h-10 w-[100px] lg:h-auto  lg:rounded-none lg:w-auto  lg:block
-                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
-                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 h-10 rounded-3xl w-full">
-                        Reporting  
-                        </button>
-                        <p class="text-slate-50 text-sm max-w-xl hidden lg:flex">Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
-                    </li>
-
-                </ul>
-            </div>
-             
-            </div>
-        
-        </div>
-     
-            <div class="w-[1000px]  sm:w-auto lg:h-[650px] lg:w-[1000px] lg:basis-11/12  rounded-2xl overflow-hidden"> 
-               
-                    <div class="   rounded-xl">
-                        <img id="payrollImage" class="w-[800px] sm:w-auto" src="../assests/image/payroll.webp" alt="">
+                                    <!-- text for reporting -->
+                                    <li id="report"  class="2xl:rounded-xl lg:bg-auto flex justify-center items-center rounded-full h-10 w-[100px] lg:h-auto  lg:rounded-none lg:w-auto  lg:block
+                                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
+                                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 h-10 rounded-3xl w-full">
+                                        Reporting  
+                                        </button>
+                                        <p class="text-slate-50 text-sm max-w-xl hidden lg:flex">Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                
+                    <!-- text section end -->
+                    <!-- payroll-image in large device start-->
+                    <div class="w-[1000px]  sm:w-auto lg:h-[650px] lg:w-[1000px] lg:basis-11/12  rounded-2xl overflow-hidden"> 
+                            <div class="rounded-xl">
+                                <img id="payrollImage" class="w-[800px] sm:w-auto" src="../assests/image/payroll.webp" alt="">
+                            </div>
+                    </div>
+                    <!-- payroll-image in large device end-->
+                </div>
+                <!-- second container end -->
+                <!-- change text in small device start -->
+                <div class=" ml-3 lg:ml-0 bg-blue-500 pb-20 lg:pb-0 -mt-[600px] sm:-mt-[500px] text-left sm:text-center tab-content lg:hidden  md:-mt-[600px] " >
+                        <div class="content active">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  " >Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
+                        </div>
+
+                        <div class="content">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto "> All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
+                        </div>
+
+                        <div class="content">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.</p>
+                        </div>
+
+                        <div class="content">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
+                        </div>
+                </div>
+                <!-- change text end -->
+
             </div>
-         
         </div>
-        <div class=" ml-3 lg:ml-0 bg-blue-500 pb-20 lg:pb-0 -mt-[600px] sm:-mt-[500px] text-left sm:text-center tab-content lg:hidden  md:-mt-[600px] " >
-            <div class="content active">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  " >Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
-            </div>
 
-            <div class="content">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto "> All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
-            </div>
-
-            <div class="content">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.</p>
-            </div>
-
-            <div class="content">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
-            </div>
-        </div>
-
-    </div>
-    </section>
- 
-    
+    <!-- next section -->
     <section class=" pb-8  overflow-hidden">
-
+        <!-- title start -->
         <div class=" container px-5  mx-auto py-20">
             <div class="text-left  sm:text-center mb-10">
                 <h1 class="text-3xl font-bold sm:text-5xl mb-8">Simplify everyday business tasks.</h1>
                 <p class=" max-w-xl sm:mx-auto">Because you’d probably be a little confused if we suggested you complicate your everyday business tasks instead.</p>
             </div>
-        </div>    
+        </div> 
+        <!-- title end -->
 
         <div class="flex divGroup lg:container mx-auto flex-col lg:flex-row">
            
             <!-- REPORTING -->
                 <div class="btn1  group gp change lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-500 max-w-2xl   px-5 container mx-auto ">
-                     <div class="bgColorBlue  mb-4 bg-blue-500 lg:group-hover:bg-slate-900 lg:bg-slate-500 w-9 flex justify-center items-center rounded-lg px">
+                    <!-- reporting image logo start -->
+                    <div class="bgColorBlue  mb-4 bg-blue-500 lg:group-hover:bg-slate-900 lg:bg-slate-500 w-9 flex justify-center items-center rounded-lg px"> 
                         <svg aria-hidden="true" class="h-9 w-9" fill="none">
                             <defs>
                                 <linearGradient id=":rc:" x1="11.5" y1="18" x2="36" y2="15.5" gradientUnits="userSpaceOnUse">
@@ -361,16 +367,13 @@ input:checked ~ .dot {
                             </defs>
                                 <path d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5" stroke="url(#:rc:)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                 </div>
-                
+                     </div>
+                     <!-- reporting image logo end -->
                     <h4 class="colorBlue  mb-4 text-blue-500 lg:group-hover:text-slate-900 lg:text-slate-500">Reporting</h4>
                     <h2 class=" mb-4  text-xl">Stay on tops of things with always up-to-date reporting features.</h2>
                     <p class="mb-20 text-sm  ">We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.</p>
-                
-                   
                 </div>
-              
-                       
+                <!-- reporting image hidden in large device start -->
                 <div class="  mb-20  w-full lg:hidden h-96 bg-slate-400">
                     <div class="ml-5 sm:ml-auto w-[800px] md:container mx-auto -mt-14 border overflow-hidden rounded-xl">
                         <div class="">
@@ -378,21 +381,24 @@ input:checked ~ .dot {
                         </div>
                     </div>
                 </div>
+                <!-- reporting image hidden in large device end -->
                         
                   
               
               <!-- INVENTORY -->
                 <div class="btn2 group gp lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-500 max-w-2xl   px-5 container mx-auto">
+                    <!-- inventory logo start -->
                     <div class="bgColorBlue lg:group-hover:bg-slate-800 mb-4 bg-blue-500 lg:bg-slate-500 w-9 flex justify-center items-center rounded-lg px">
                         <svg aria-hidden="true" class="h-9 w-9" fill="none">
                             <path opacity=".5" d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z" fill="#fff"></path><path opacity=".3" d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z" fill="#fff"></path><path d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z" fill="#fff"></path>
                         </svg>      
                     </div>
+                     <!-- inventory logo end -->
                     <h4 class="colorBlue group-hover:text-slate-800 mb-4  text-blue-500 lg:text-slate-500">Inventory</h4>
                     <h2 class="mb-4 text-xl">Never lose track of what's in stock with accurate inventory tracking</h2>
                     <p  class="mb-20 text-sm">We don't offer this as part of our software but that statement is inarguably true. Accutrate inventory tracking would help you for sure.</p> 
                 </div>
-
+                <!-- inventory image hidden in large device start -->
                 <div class="  mb-20  w-full lg:hidden h-96 bg-slate-400">
                     <div class="ml-5 sm:ml-auto w-[800px] md:container mx-auto -mt-14 border overflow-hidden rounded-xl">
                         <div class="">
@@ -401,19 +407,22 @@ input:checked ~ .dot {
                      
                     </div>
                 </div>
+                <!-- inventory image hidden in large device end -->
              
                 <!-- CONTACT -->
 
                 <div class="btn3 gp group lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-600 max-w-2xl  px-5 container mx-auto">
+                   <!-- contacts start -->
                     <div class="bgColorBlue lg:group-hover:bg-slate-800 mb-4 bg-blue-500 lg:bg-slate-500  w-9 flex justify-center items-center rounded-lg px">
                         <svg aria-hidden="true" class="h-9 w-9" fill="none"><path opacity=".5" d="M25.778 25.778c.39.39 1.027.393 1.384-.028A11.952 11.952 0 0 0 30 18c0-6.627-5.373-12-12-12S6 11.373 6 18c0 2.954 1.067 5.659 2.838 7.75.357.421.993.419 1.384.028.39-.39.386-1.02.036-1.448A9.959 9.959 0 0 1 8 18c0-5.523 4.477-10 10-10s10 4.477 10 10a9.959 9.959 0 0 1-2.258 6.33c-.35.427-.354 1.058.036 1.448Z" fill="#fff"></path><path d="M12 28.395V28a6 6 0 0 1 12 0v.395A11.945 11.945 0 0 1 18 30c-2.186 0-4.235-.584-6-1.605ZM21 16.5c0-1.933-.5-3.5-3-3.5s-3 1.567-3 3.5 1.343 3.5 3 3.5 3-1.567 3-3.5Z" fill="#fff"></path>
                         </svg>
                     </div>
+                   <!-- contacts end -->
                     <h4 class="colorBlue group-hover:text-slate-900 mb-4 text-blue-500 lg:text-slate-500" >Contacts</h4>
                     <h2 class="mb-4 text-xl">Organize all of your contats, service providers, and invoices in one place.</h2>
                     <p class="mb-20 text-sm  ">This also isn't actually a feature, it's just some friendly advice. We dfinitely recomend that you do this, you'll feel really organized and professional.</p>
                 </div>
-                
+                <!-- contact image hidden in large device start -->
                 <div class="  mb-20  w-full lg:hidden h-96 bg-slate-400">
                     <div class="ml-5 sm:ml-auto w-[800px] md:container mx-auto -mt-14 border overflow-hidden rounded-xl">
                         <div class="">
@@ -422,13 +431,14 @@ input:checked ~ .dot {
                      
                     </div>
                 </div>
+                <!-- contact image hidden in large device end -->
 
-            </div>
+        </div>
 
         <!-- LG: DEVICE -->
         <div class="lg:pb-20">
 
-                <div >
+                <div>
                     <div class="container mx-auto  hidden lg:flex  lg:py-0 relative">
                         
                         <div class="w-[1200px] relative items-center overflow-hidden mx-auto container lg:flex rounded-3xl lg:h-[550px] bg-slate-300 border">
@@ -469,6 +479,11 @@ input:checked ~ .dot {
           </div>
 
     </section>
+
+    </section>
+ 
+    
+    
 
     <!-- textimonials -->
     <section id="testimonial">
@@ -667,7 +682,7 @@ input:checked ~ .dot {
     <!-- Questions  -->
     <section>
        <div class="relative ">
-            <img alt="" src="../assests/image/background-faqs.55d2e36a.jpg" class="-z-10 absolute w-full h-[1700px] sm:h-[1600px] md:h-[1500px] lg:h-[1150px] xl:h-[1100px] 3xl:h-[900px]" >
+            <img alt="" src="../assests/image/background-faqs.55d2e36a.jpg" class="-z-10 absolute w-full h-[1850px] sm:h-[1600px] md:h-[1500px] lg:h-[1150px] xl:h-[1100px] 3xl:h-[900px]" >
     
         <div class="">
             <div class="container  mx-auto tex-left px-5 py-20">
@@ -756,6 +771,8 @@ input:checked ~ .dot {
         </div>
     </div>
     </section>
+
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
   <script>
 
@@ -899,11 +916,11 @@ let closeMenu = document.querySelector(".close-menu")
 
 openMenu.addEventListener("click",()=>{
     menu.style.top="8%";
-    menu.style.transition="0.1s";
+   
     menu.style.duration ="0.1s"
 })
 closeMenu.addEventListener("click",()=>{
-    menu.style.top="-100%"
+    menu.style.top="-500%"
 })
 
 // waypoints
@@ -912,11 +929,28 @@ var waypoint = new Waypoint({
   element: document.getElementById('feature'),
   handler: function(direction) {
     if(direction === "down"){
-    navBar.classList.add("fixed","bg-slate-50","shadow-md","shadow-slate-500","w-full","z-30","bg-opacity-95");
+    navBar.classList.add("fixed","bg-slate-50","shadow-md","shadow-slate-500","w-full","z-30","bg-opacity-95","animate__slideInDown");
+    menu.style.top = "-500%"
+    openMenu.addEventListener("click",()=>{
+    menu.style.top="90%";
+    
+    menu.style.duration ="0.1s"
+})
+closeMenu.addEventListener("click",()=>{
+    menu.style.top="-500%"
+})
     }
     else{
-    navBar.classList.remove("fixed","bg-slate-50","shadow-md","shadow-slate-500","w-full","z-30","bg-opacity-95");
-        
+    navBar.classList.remove("fixed","bg-slate-50","shadow-md","shadow-slate-500","w-full","z-30","bg-opacity-95","animate__slideInDown");
+    menu.style.top = "-500%"
+    openMenu.addEventListener("click",()=>{
+    menu.style.top="8%";
+   
+    menu.style.duration ="0.1s"
+})
+closeMenu.addEventListener("click",()=>{
+    menu.style.top="-500%"
+})
     }
     
   },
@@ -926,9 +960,58 @@ var waypoint = new Waypoint({
 let closeMobileSlide = document.querySelectorAll(".close-mobile-slide");
 for( let i = 0 ; i< closeMobileSlide.length;i++){
     closeMobileSlide[i].addEventListener("click",()=>{
-        menu.style.top="-100%"
+        menu.style.top="-500%"
     })
 }
+
+//  nav active link
+
+const sections = document.querySelectorAll("section[id]")
+function activeScroll (){
+    const scrollY = window.pageYOffset;
+    // console.log("scrollY")
+    sections.forEach((current)=>{
+        const sectionHeight = current.offsetHeight;
+        console.log(sectionHeight)
+        sectionTop = current.offsetTop - 58;
+       
+        sectionId = current.getAttribute("id")
+        
+       if(scrollY>sectionTop && scrollY<=sectionTop + sectionHeight){
+         document.querySelector("a[href*="+sectionId+"]")
+         .classList.add("active-link")
+       }else{
+        document.querySelector("a[href*="+sectionId+"]")
+        .classList.remove("active-link")
+       }
+        
+    })
+}
+window.addEventListener("scroll",activeScroll)
+
+// ScrollReveal
+ScrollReveal().reveal('.reveal', {
+     delay: 700,
+     origin:"bottom",
+     distance:"50px",
+     reset:true,
+     interval: 200,
+     scale:0.85,
+     
+ }
+
+);
+ScrollReveal().reveal('.reveal1', {
+     delay: 500,
+     origin:"bottom",
+     distance:"50px",
+     reset:true,
+     interval: 200,
+     scale:0.85,
+     
+ }
+
+);
     </script>
 </body>
 </html>
