@@ -824,22 +824,6 @@ video {
   height: 1em;
 }
 
-.h-\[1700px\] {
-  height: 1700px;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[1800px\] {
-  height: 1800px;
-}
-
-.h-\[180px\] {
-  height: 180px;
-}
-
 .h-\[1850px\] {
   height: 1850px;
 }
@@ -1080,6 +1064,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-t-md {
