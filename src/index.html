@@ -18,12 +18,85 @@ input:checked ~ .dot {
   transform: translateX(100%);
   background-color: #0b24a1;
 }
+*{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .loading{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#fff;
+            position:fixed;
+            z-index:50
+        }
+        .loading .inner_one{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            display:inline-block;
+            background:#5c93ec;
+            animation:move-ball 1s infinite linear
+        }
+        .inner_one:nth-child(2){
+            background-color:#ef55c6;
+            animation-delay:-0.2s
+        }
+        .inner_one:nth-child(3){
+            background-color:#44fcf9;
+            animation-delay:-0.4s;
+        }
+        .inner_one:nth-child(4){
+            background-color:#efce55;
+            animation-delay:-0.6s
+        }
+        .inner_one:nth-child(5){
+            background-color:#5fef55;
+            animation-delay:-0.8s;
+        }
+        @keyframes move-ball{
+            0%{
+                box-shadow:0px 21px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(0) scale(1)
+            }
+            25%{
+                box-shadow:0px 31.5px 15px rgba(0,0,0,0.25);
+                filter:(1);
+                transform:translateY(-15.5px) scale(0.85)
+            }
+            50%{
+                box-shadow:0px 5px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(0) scale(0.5)
+            }
+            75%{
+                box-shadow:0px 25px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(12.5px) scale(0.75)
+            }
+            100%{
+                box-shadow:0px 21px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(0px) scale(1)
+            }
+        }
 </style>
 <link rel="stylesheet" href="../dist/output.css">
 <script src="https://kit.fontawesome.com/485af02044.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<body>
+<body class="dark:bg-slate-900">
+    <div class="loading">
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+    </div>
             <!-- nav bar -->
 <div class="nav-bar  animate__animated">
     <!-- nav container start -->
@@ -796,7 +869,7 @@ input:checked ~ .dot {
 
     // dark mode icon
     const switchToggle = document.querySelector('#switch-toggle');
-    let isDarkmode = false
+    let isDarkmode = null
     
     const darkIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
@@ -812,23 +885,23 @@ input:checked ~ .dot {
       switchTheme()
     }
     
-    function switchTheme (){
-      if (isDarkmode) {
-        switchToggle.classList.remove('bg-blue-500','-translate-x-2')
-        switchToggle.classList.add('bg-gray-700','translate-x-full')
-        setTimeout(() => {
-          switchToggle.innerHTML = darkIcon
-        }, 250);
-      } else {
-        switchToggle.classList.add('bg-blue-500','-translate-x-2')
-        switchToggle.classList.remove('bg-gray-700','translate-x-full')
-        setTimeout(() => {
-          switchToggle.innerHTML = lightIcon
-        }, 250);
-      }
-    }
+    // function switchTheme (){
+    //   if (isDarkmode) {
+    //     switchToggle.classList.remove('bg-blue-500','-translate-x-2')
+    //     switchToggle.classList.add('bg-gray-700','translate-x-full')
+    //     setTimeout(() => {
+    //       switchToggle.innerHTML = darkIcon
+    //     }, 250);
+    //   } else {
+    //     switchToggle.classList.add('bg-blue-500','-translate-x-2')
+    //     switchToggle.classList.remove('bg-gray-700','translate-x-full')
+    //     setTimeout(() => {
+    //       switchToggle.innerHTML = lightIcon
+    //     }, 250);
+    //   }
+    // }
     
-    switchTheme()
+    
 // For dark mode icon end
 
 // change image second section
@@ -1025,6 +1098,44 @@ ScrollReveal().reveal('.reveal2', {
      
  }
 );
+
+// loading
+ const loading = document.querySelector(".loading");
+ window.addEventListener('load',()=>{
+    loading.style.display= "none"
+ })
+
+// dark mode for large device switch button
+const toggle = document.getElementById("switch-toggle")
+
+toggle.addEventListener("click",()=>{
+    // console.log("toggle")
+    document.documentElement.classList.toggle("dark")
+
+})
+const toggleA = document.getElementById("toogleA")
+const changeThemetoDark = ()=>{
+    document.documentElement.classList.add("dark")
+    localStorage.setItem("data-theme","dark")
+}
+const changeThemetoLight = ()=>{
+    document.documentElement.classList.remove("light");
+    localStorage.setItem("data-theme","light")
+}
+toggleA.addEventListener("click",()=>{
+const theme = localStorage.getItem("data-theme")
+    if(theme === "dark"){
+        changeThemetoLight()
+    }else{
+        changeThemetoDark()
+    }
+})
+const theme = localStorage.getItem("data-theme")
+    if(theme === "dark"){
+        changeThemetoDark()
+    }else{
+        changeThemetoLight()
+    }
      
 </script>
 
