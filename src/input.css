@@ -4,6 +4,12 @@
 .active-link{
     @apply border-b-2 border-blue-700
 }
+.text:hover{
+    font-size:35px;
+    -webkit-text-stroke: 2px white;
+    -webkit-text-fill-color:black
+
+}
 .live{
     background-color:rgb(240, 246, 255, 0.1);
 }

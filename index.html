@@ -1,20 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
+
+<link rel="icon" href="../assests/image/logo.png">
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- font end -->
+
+    <!-- Primary Meta Tags -->
+<title>Taxpal- Accounting made simple for small business</title>
+<meta name="title" content="Taxpal- Accounting made simple for small business">
+<meta name="description" content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don't get audited.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/">
+<meta property="og:title" content="Taxpal- Accounting made simple for small business">
+<meta property="og:description" content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don't get audited.">
+<meta property="og:image" content="../assests/image/thumbnail.png ">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://github.com/">
+<meta property="twitter:title" content="Taxpal- Accounting made simple for small business">
+<meta property="twitter:description" content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don't get audited.">
+<meta property="twitter:image" content="../assests/image/thumbnail.png">
+
+<!-- dark mode url bar -->
+<meta name="theme-color" content="#0f172a">
+ 
 <style>
-   
+   /* Toggle A */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #0b24a1;
+}
+
+/* Toggle B */
+        input:checked ~ .dot {
+        transform: translateX(100%);
+        background-color: #0b24a1;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        .loading{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#fff;
+            position:fixed;
+            z-index:50
+        }
+        .loading .inner_one{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            display:inline-block;
+            background:#5c93ec;
+            animation:move-ball 1s infinite linear
+        }
+        .inner_one:nth-child(2){
+            background-color:#ef55c6;
+            animation-delay:-0.2s
+        }
+        .inner_one:nth-child(3){
+            background-color:#44fcf9;
+            animation-delay:-0.4s;
+        }
+        .inner_one:nth-child(4){
+            background-color:#efce55;
+            animation-delay:-0.6s
+        }
+        .inner_one:nth-child(5){
+            background-color:#5fef55;
+            animation-delay:-0.8s;
+        }
+        @keyframes move-ball{
+            0%{
+                box-shadow:0px 21px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(0) scale(1)
+            }
+            25%{
+                box-shadow:0px 31.5px 15px rgba(0,0,0,0.25);
+                filter:(1);
+                transform:translateY(-15.5px) scale(0.85)
+            }
+            50%{
+                box-shadow:0px 5px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(0) scale(0.5)
+            }
+            75%{
+                box-shadow:0px 25px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(12.5px) scale(0.75)
+            }
+            100%{
+                box-shadow:0px 21px 15px rgba(0,0,0,0.25);
+                filter:(1.1);
+                transform:translateY(0px) scale(1)
+            }
+        }
+        /* dark mode */
+            :root {
+            --light: #d8dbe0;
+            --dark: #28292c;
+            --link: rgb(27, 129, 112);
+            --link-hover: rgb(24, 94, 82);
+            }
+
+            .toggle-switch {
+            position: relative;
+            width: 200px;
+            }
+
+            label {
+            position: absolute;
+            width: 70%;
+            height: 75px;
+            background-color: var(--dark);
+            border-radius: 50px;
+            border:5px solid blue;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 11px rgba(0,0,0,0.25);
+            }
+
+            input {
+            position: absolute;
+            display: none;
+            }
+
+            .slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            transition: 0.3s;
+            }
+
+            input:checked ~ .slider {
+            background-color: var(--light);
+            }
+
+            .slider::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: inset 28px -4px 0px 0px var(--light);
+            background-color: var(--dark);
+            transition: 0.3s;
+            }
+
+            input:checked ~ .slider::before {
+            transform: translateX(55px);
+            background-color: var(--dark);
+            box-shadow: none;
+            }
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="stylesheet" href="../dist/output.css">
 <script src="https://kit.fontawesome.com/485af02044.js" crossorigin="anonymous"></script>
-<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<body class="dark:bg-slate-900">
+    
+    <div class="loading">
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+        <div class="inner_one"></div>
+    </div>
             <!-- nav bar -->
-<div>
-    <div class="px-5 container mx-auto flex justify-between items-center bg-slate-400 py-5">
+<div class="dark:bg-slate-100 nav-bar  animate__animated">
+    <!-- nav container start -->
+    <div class="px-5  container mx-auto flex justify-between items-center  py-5">
+        <!-- left -->
         <div  class=" flex items-center space-x-2 lg:space-x-6">
             <ul>
                 <li>
@@ -26,41 +208,75 @@
                     </svg>
                 </li>
             </ul>
-            <ul class="space-x-2 lg:space-x-6 hidden md:flex ">
-                <li class="hover:bg-slate-100 rounded-md px-2 py-1 ">Features</li>
-                <li class="hover:bg-slate-100 rounded-md px-2 py-1 ">Testimonials</li>
-                <li class="hover:bg-slate-100 rounded-md px-2 py-1 ">Pricing</li>
-            </ul>
-                
-            
-        </div>
-       
-        <div class="flex  items-center space-x-0 md:space-x-1 lg:space-x-6">
-            <button class="hover:bg-slate-100 rounded-md px-2 py-1 md:flex hidden">Sign in</button>
-           
-            <button class=" bg-blue-700 scale-75 md:scale-100 hover:bg-blue-600 text-white font-bold px-3 py-2 rounded-full    flex flex-row "><span class="mx-1">Get started</span> <span class="hidden lg:flex">today</span> </button>
-            <!-- dark mode -->
-            <button class=" w-20 ml-96 scale-50 md:scale-75 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow" onclick="toggleTheme()">
-                <div id="switch-toggle" class=" w-12 h-12 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+            <!-- ့hidden  top-5-->
+            <ul class="menu md:space-x-2 pt-7 sm:pt-0 text-blue-700 font-bold md:font-normal md:text-slate-900 lg:space-x-6  md:flex  md:static bg-slate-200 md:bg-transparent  fixed z-10  left-12 sm:left-80 right-0 max-w-xs md:w-40 px-5 leading-10  rounded-xl -top-96  "> 
+                <div class="close-menu absolute cursor-pointer text-2xl left-72 md:hidden">
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
-            </button>
-            <!-- menu icon -->
-            <div class="flex md:hidden ">
-                <i class="text-xl  fa-solid fa-bars"></i>
-            </div>
+                <li class="md:hover:bg-slate-300  close-mobile-slide rounded-md  w-20 md:w-auto  px-2 cursor-pointer"><a href="#feature">Features</a></li>
+                <li class="md:hover:bg-slate-300 close-mobile-slide rounded-md  w-24 md:w-auto  px-2  cursor-pointer"><a href="#testimonial">Testimonials</a></li>
+                <li class="md:hover:bg-slate-300 mb-5 md:mb-0 close-mobile-slide rounded-md   w-20 md:w-auto px-2  cursor-pointer"> <a href="#pricing">Pricing</a></li>
+                <hr class="w-full h-1 bg-slate-300">
+                <!-- <div class="w-full h-1 bg-slate-900"></div> -->
+                <div class="flex justify-between  mt-4 lg:mr-10 md:absolute md:hidden">
+                    <div class="mt-2  px-2 pb-5">Sign in</div>
+                    <!-- darkmode -->
+                    <div>
+
+                        <div class = 'top-4 left-20  md:left-20 lg:left-32 xl:left-44  md:flex scale-[0.4] toggle-switch'>
+                            <label>
+                                <input type = 'checkbox' id="toggle">
+                                <span class = 'slider'></span>
+                            </label>
+                           
+                        </div>
+                    </div>
+                </div>
+            </ul> 
         </div>
+        <!-- left end -->
+       <!-- right part -->
+        <div class="flex  relative  xl:w-96  items-center ">
+            <div class="md:absolute  md:-left-72 lg:-left-80 xl:left-4 mr-5">
+            <button class=" hover:bg-slate-300  rounded-md px-2 py-2 z-0 md:flex hidden">Sign in</button>
+            </div>
+            <div class="left-20 ">
+            <button class=" bg-blue-700 -top-5 scale-90  md:-left-48 lg:-left-56 xl:left-28 static md:absolute  md:scale-100 hover:bg-blue-600 text-white font-bold px-3 py-2 rounded-full    flex flex-row "><span class="mx-1">Get started</span> <span class="hidden lg:flex">today</span> </button>
+            </div>
+           
+            <!-- dark mode -->
+          
+
+                    <div class="hidden md:flex absolute md:-left-20 lg:-left-10 xl:left-72 ">
+                        <button id="dark-switch" onclick="toggleTheme()" class="scale-75 md:scale-100 shadow w-[72px] flex items-center transition duration-200 rounded-full m-5 bg-slate-800 p-1">
+                            <div id="dark-switch-icon" class="bg-slate-200 w-8 h-8 rounded-full transform transition duration-200 flex justify-center items-center">
+                                <i class="fa-regular fa-sun"></i>
+                            </div>
+                            <h6 id="dark-text" class="text-slate-200 dark:text-slate-900 translate-x-1">FF</h6>
+                        </button>
+                      
+                    </div>
         
     
+            <!-- dark mode  -->
+            <!-- menu icon -->
+            <div class="open-menu flex  md:absolute md:hidden  border w-10 h-9 bg-blue-700 text-white cursor-pointer hover:bg-blue-800 hover:shadow-lg rounded-full justify-center items-center">
+                <i class="text-xl  fa-solid fa-bars"></i>
+            </div>
+            <!-- menu icon end -->
+        </div>
+        <!-- right part end --> 
+
+
     </div>
+    <!-- nav  container end -->
 </div>
+<!-- nav bar end -->
 
     <!-- first section -->
     <div>
         <div class="container  md:max-w-[900px] max-w-[600px] mx-auto text-center py-36 ">
-            <h1 class="text-5xl   md:text-7xl font-bold leading-tight my-4 w-auto ">
+            <h1 class="dark:text-slate-50 text-5xl reveal   md:text-6xl  font-bold leading-tight my-4 w-auto ">
                 Accounting 
                 <span class="relative inline-block xl:inline ">
                     <span class="">
@@ -73,23 +289,23 @@
                
                 for small businesses.
             </h1>
-            <p class="max-w-lg mx-auto my-8">
+            <p class="dark:text-slate-100 reveal max-w-lg mx-auto my-8">
                 Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited
             </p>
-            <button class="bg-slate-900 border border-slate-900 text-white rounded-full px-4 py-2 mx-4">Get 6 months free</button>
-            <button class="rounded-full px-4 py-2 border"><i class="text-blue-700 fa-solid fa-play"></i>  Watch video</button>
+            <button class="dark:bg-slate-50 dark:hover:shadow-md dark:hover:shadow-slate-200  dark:text-slate-900 reveal bg-slate-900 border border-slate-900 text-white rounded-full px-4 py-2 mx-4">Get 6 months free</button>
+            <button class="dark:text-slate-50 dark:hover:shadow-md dark:hover:shadow-slate-200  reveal rounded-full px-4 py-2 border"><i class="text-blue-700 fa-solid fa-play"></i>  Watch video</button>
             
         </div>
-        <div class="container mb-5 mx-auto">
-              <h1 class="text-center text-xl">Trusted by these six companies so far</h1>  
+        <div class="reveal container mb-5 mx-auto">
+              <h1 class="dark:text-slate-300 text-center text-xl">Trusted by these six companies so far</h1>  
         </div>
 
-        <!-- design -->
+        <!-- logo -->
     
-        <div class=" container mb-20 px-3   sm:px-20  mx-auto grid sm:grid-cols-1 lg:grid-cols-2  grid-cols-2 gap-y-0 sm:gap-y-5 gap-x-20 sm:gap-x-20 ">
+        <div class=" container mb-20 px-3   sm:px-20  mx-auto grid sm:grid-cols-1 lg:grid-cols-2  grid-cols-2 gap-y-0 sm:gap-y-5 gap-x-5 sm:gap-x-8 lg:gap-x-24 xl:gap-x-8 ">
             <div class="">
                 <ul class="flex flex-col sm:flex-row  justify-between gap-y-7 md:gap-y-0  gap-x-7">
-                    <li class=" mx-auto ">
+                    <li class="reveal1 mx-auto ">
                         <svg  class=" scale-90  sm:scale-110" width="158" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)" fill="#334155">
                               <path
@@ -106,7 +322,7 @@
                         <!-- w-158 h-48 -->
                     </li>
      
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="105" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M18 4 0 10v19.5l6 2V37l18 6V11.5l-6 2V4ZM8 32.167 18 35.5V15.608l4-1.333v25.95L8 35.56v-3.393Z" fill="#334155" />
@@ -122,7 +338,7 @@
                         </svg> 
                     </li>
     
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="127" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                               d="m3.31 28.903 14.75-15.816L14.749 10 0 25.816l3.31 3.087ZM5.792 39 20.54 23.184l-3.31-3.087L2.482 35.913 5.792 39Zm31.261-18.216a3.87 3.87 0 0 0-1.441-1.115c-.594-.276-1.166-.414-1.718-.414-.284 0-.572.025-.864.075a2.23 2.23 0 0 0-.79.289c-.234.142-.43.326-.59.551-.158.226-.237.514-.237.865 0 .3.062.552.188.752.125.2.309.376.551.527.242.15.53.288.865.413.334.126.71.255 1.128.389.602.2 1.229.422 1.88.664a7.03 7.03 0 0 1 1.78.965 5.07 5.07 0 0 1 1.329 1.492c.35.593.526 1.333.526 2.219 0 1.019-.188 1.9-.564 2.644a5.274 5.274 0 0 1-1.516 1.843 6.499 6.499 0 0 1-2.181 1.078 9.17 9.17 0 0 1-2.532.35c-1.27 0-2.499-.22-3.685-.663-1.187-.443-2.173-1.074-2.959-1.893l2.808-2.858c.435.535 1.007.982 1.717 1.341.71.36 1.417.54 2.119.54.317 0 .626-.034.927-.101.301-.067.564-.176.79-.326.225-.15.405-.351.539-.602.134-.25.2-.551.2-.902 0-.334-.083-.619-.25-.853a2.45 2.45 0 0 0-.715-.639 5.76 5.76 0 0 0-1.153-.526c-.46-.159-.982-.33-1.567-.514a14.963 14.963 0 0 1-1.667-.652 5.58 5.58 0 0 1-1.454-.965 4.471 4.471 0 0 1-1.028-1.43c-.259-.559-.388-1.24-.388-2.042 0-.986.2-1.83.601-2.532.39-.689.93-1.28 1.58-1.73a6.786 6.786 0 0 1 2.206-.99c.81-.208 1.645-.314 2.482-.314 1.002 0 2.026.184 3.07.552 1.045.368 1.96.91 2.746 1.63l-2.733 2.882Zm9.677 3.736v4.763c0 .585.113 1.023.338 1.316.226.292.631.439 1.216.439.2 0 .414-.017.64-.05.194-.025.383-.075.563-.15l.05 3.007c-.283.1-.643.188-1.077.264a7.63 7.63 0 0 1-1.304.112c-.836 0-1.538-.104-2.106-.313-.568-.209-1.023-.51-1.366-.902a3.54 3.54 0 0 1-.74-1.404 6.804 6.804 0 0 1-.225-1.818V24.52h-2.006v-3.084h1.98v-3.284h4.037v3.284h2.933v3.084H46.73Zm12.234 3.96h-.527c-.451 0-.906.021-1.366.063-.46.042-.87.122-1.228.238a2.27 2.27 0 0 0-.89.514c-.234.226-.351.523-.351.89 0 .234.054.435.163.602.108.167.246.3.413.401.167.1.36.171.577.213a3.3 3.3 0 0 0 .627.063c.835 0 1.474-.23 1.917-.69.443-.46.665-1.082.665-1.867v-.427Zm-7.546-5.34a7.2 7.2 0 0 1 2.57-1.579 8.805 8.805 0 0 1 2.995-.526c1.053 0 1.943.13 2.67.389.727.259 1.316.66 1.767 1.203.452.543.782 1.228.99 2.056.21.827.314 1.809.314 2.945v6.293h-3.76v-1.329h-.076c-.317.518-.798.92-1.441 1.203a5.125 5.125 0 0 1-2.093.426 6.403 6.403 0 0 1-1.555-.2 4.554 4.554 0 0 1-1.466-.652 3.53 3.53 0 0 1-1.09-1.203c-.285-.502-.427-1.12-.427-1.855 0-.903.247-1.63.74-2.181.493-.552 1.128-.978 1.905-1.279.777-.3 1.642-.501 2.595-.601.952-.1 1.88-.151 2.782-.151v-.2c0-.619-.217-1.074-.651-1.367-.435-.292-.97-.439-1.605-.439a3.99 3.99 0 0 0-1.692.377 5.4 5.4 0 0 0-1.392.902l-2.08-2.231v-.001Zm18.688 1.38v4.763c0 .585.112 1.023.338 1.316.225.292.63.439 1.216.439.2 0 .413-.017.639-.05.226-.034.414-.084.564-.15l.05 3.007a6.88 6.88 0 0 1-1.078.264c-.43.075-.866.112-1.303.112-.836 0-1.538-.104-2.106-.313-.568-.209-1.024-.51-1.366-.902a3.537 3.537 0 0 1-.74-1.404 6.808 6.808 0 0 1-.226-1.818V24.52H64.09v-3.084h1.98v-3.284h4.037v3.284h2.933v3.084H70.106Zm9.325-7.07c0 .318-.063.614-.188.89-.12.268-.29.51-.501.715a2.44 2.44 0 0 1-1.667.652c-.669 0-1.229-.222-1.68-.665a2.15 2.15 0 0 1-.677-1.592c0-.3.059-.589.176-.865.117-.275.284-.514.501-.714.217-.2.468-.364.752-.489s.593-.188.928-.188a2.445 2.445 0 0 1 1.667.652c.209.2.376.439.501.714.126.276.188.573.188.89ZM75.02 33.92V21.437h4.111v12.485H75.02v-.002Zm15.273-8.448a2.496 2.496 0 0 0-.953-.727 2.92 2.92 0 0 0-1.228-.275c-.435 0-.828.087-1.179.263a2.86 2.86 0 0 0-.902.702c-.25.292-.447.63-.59 1.015-.143.393-.215.81-.212 1.228 0 .435.067.844.2 1.229a3 3 0 0 0 .59 1.015c.258.293.568.522.927.69.36.167.765.25 1.216.25.418 0 .831-.08 1.24-.238.41-.159.74-.389.99-.69l2.282 2.783c-.518.502-1.186.894-2.005 1.178-.84.288-1.72.432-2.608.427a8.229 8.229 0 0 1-2.757-.452 6.361 6.361 0 0 1-2.219-1.316 6.18 6.18 0 0 1-1.479-2.093c-.36-.819-.539-1.746-.539-2.783 0-1.02.18-1.938.54-2.757a6.181 6.181 0 0 1 1.478-2.093 6.519 6.519 0 0 1 2.219-1.33 7.951 7.951 0 0 1 5.352.001c.41.142.786.317 1.128.526.343.21.64.439.89.69l-2.381 2.757Zm15.091 8.449-6.593-8.173h-.05v8.173h-4.212V16.17h4.212v7.22h.075l6.343-7.22h5.364l-7.646 8.173 8.098 9.577h-5.591v.001Zm11.206-16.47c0 .317-.062.613-.188.89-.12.268-.29.51-.501.714a2.445 2.445 0 0 1-1.667.652c-.669 0-1.229-.222-1.68-.665a2.152 2.152 0 0 1-.677-1.592c0-.3.059-.589.176-.865.117-.275.284-.514.501-.714.217-.2.468-.364.752-.489s.593-.188.928-.188a2.445 2.445 0 0 1 1.667.652c.209.2.376.439.501.714.126.276.188.573.188.89v.001Zm-4.412 16.47V21.436h4.111v12.485h-4.111Zm11.833-9.401v4.763c0 .585.112 1.023.338 1.316.226.292.631.439 1.216.439.2 0 .414-.017.639-.05.194-.024.384-.075.564-.15l.05 3.007a6.88 6.88 0 0 1-1.078.264c-.43.075-.866.112-1.303.112-.836 0-1.538-.104-2.106-.313-.568-.209-1.024-.51-1.366-.902a3.535 3.535 0 0 1-.74-1.404 6.84 6.84 0 0 1-.225-1.818V24.52h-2.006v-3.084h1.981v-3.284h4.036v3.284h2.933v3.084h-2.933Z"
@@ -134,7 +350,7 @@
             
             <div>
                 <ul class="flex flex-col sm:flex-row   lg:justify-between gap-y-7 md:gap-y-0 gap-x-7 ">
-                    <li  class=" mx-auto">
+                    <li  class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="138" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)" fill="#334155">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -154,7 +370,7 @@
                         </svg>
                     </li>
      
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="136" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)" fill="#334155">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -176,7 +392,7 @@
                            
                     </li>
     
-                    <li class=" mx-auto">
+                    <li class="reveal1 mx-auto">
                         <svg class="scale-90 sm:scale-110" width="147" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#a)">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -201,141 +417,118 @@
     </div>
 
     <!-- Features Section h-1000px -->
-    <section class="overflow-hidden pb-[600px] lg:pb-[200px]   min-w-screen  bg-[url('/assests/image/bg.webp')] bg-cover object-center py-14  ">
-        <div class="container mx-auto relative">
-            <div class="mx-auto max-w-4xl py-28">
-                <h1 class="text-center text-5xl text-slate-50" >Everything You need to run your books.</h1>
-                <h6 class="text-center mx-auto mt-6 max-w-xl text-slate-50">
-                    Well everything you need if  you aren't that picky about minor details like tax compliance. 
-                </h1>
-            </div>
-        </div>
-
-        <div class="container mx-auto ">
-
-        
-        <div class="pl-3 xs:pl-0 lg:px-0 grid  lg:grid-cols-2  container  rounded-t-md mx-auto   "> 
-            <div class=" ">
-            <div class=" bg-blue-500 rounded-xl lg:rounded-0  mx-auto h-44 lg:bg-transparent pb-36 pt-10  lg:px-0 lg:pb-0 lg:pt-0">
-               <div class="   w-[65%] h-16 sm:h-auto xs:w-auto sm:w-auto    sm:relative  overflow-x-scroll sm:overflow-x-hidden  lg:w-auto">
-                <ul class="px-5  sm:px-0 sm:overflow-x-hidden w tabs w-[900px] xs:w-auto sm:w-auto  lg:pl-5 lg:ml- lg:mt-24  flex sm:justify-center  items-center lg:flex-col space-x-6 lg:space-x-0 ">
-                  
-                    <li id="payroll"  class=" 2xl:rounded-xl lg:bg-auto flex justify-center rounded-full   w-[100px] lg:h-auto lg:rounded-none lg:w-auto  lg:block 
-                     live  sm:hover:bg-blue-50 cursor-pointer    sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl  ">
-                        <button  class="color h-10 text-md  lg:text-xl text-center lg:text-left text-slate-50  w-50 px-6 lg:px-0 lg:w-0 lg:mb-2 rounded-3xl ">
-                        Payroll     
-                        </button>
-                         <p  class=" text-slate-50 text-sm hidden max-w-xl lg:flex ">Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
- 
-                    </li>
-                    
-                   
-                    <li id="expenses"  class="2xl:rounded-xl   lg:bg-auto flex justify-center items-center rounded-full  h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block  
-                    sm:hover:bg-blue-50  cursor-pointer  sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl ">
-                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
-                         Claim expenses   
-                        </button>
-                        <p class="text-slate-50 text-sm hidden max-w-xl  lg:flex">All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
-                    </li>  
-                   
-                   
-                    <li id="vat" class="2xl:rounded-xl  lg:bg-auto flex justify-center items-center rounded-full h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block
-                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
-                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
-                       VAT handling
-                        </button>
-                        <p class="text-slate-50 text-sm hidden max-w-xl lg:flex">
-                            We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.
-                        </p>
-                    </li>
-
-                    <li id="report"  class="2xl:rounded-xl lg:bg-auto flex justify-center items-center rounded-full h-10 w-[100px] lg:h-auto  lg:rounded-none lg:w-auto  lg:block
-                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
-                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 h-10 rounded-3xl w-full">
-                        Reporting  
-                        </button>
-                        <p class="text-slate-50 text-sm max-w-xl hidden lg:flex">Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
-                    </li>
-
-                </ul>
-            </div>
-             
-            </div>
-        
-        </div>
-     
-            <div class="w-[1000px]  sm:w-auto lg:h-[650px] lg:w-[1000px] lg:basis-11/12  rounded-2xl overflow-hidden"> 
-               
-                    <div class="   rounded-xl">
-                        <img id="payrollImage" class="w-[800px] sm:w-auto" src="../assests/image/payroll.webp" alt="">
-                    </div>
-                
-            </div>
-         
-        </div>
-        <div class=" ml-3 lg:ml-0 bg-blue-500 pb-20 lg:pb-0 -mt-[600px] sm:-mt-[500px] text-left sm:text-center tab-content lg:hidden  md:-mt-[600px] " >
-            <div class="content active">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  " >Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
-            </div>
-
-            <div class="content">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto "> All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
-            </div>
-
-            <div class="content">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.</p>
-            </div>
-
-            <div class="content">
-                <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
-            </div>
-        </div>
-
-    </div>
-    </section>
- 
-    <!-- <section class="  min-w-screen min-h-screen bg-[url('/assests/image/bg.webp')] bg-cover object-center py-36 ">
-            <div class="container mx-auto">
+    <section id="feature" >
+        <div class=" overflow-hidden pb-[600px] lg:pb-[200px]   min-w-screen  bg-[url('../assests/image/bg.webp')] bg-cover object-center py-14  ">
+            <!-- title -->
+            <div class="container mx-auto relative">
                 <div class="mx-auto max-w-4xl py-28">
-                    <h1 class="text-center text-5xl text-slate-50" >Everything You need to run your books.</h1>
-                    <h6 class="text-center mx-auto mt-6 max-w-xl text-slate-50">
+                    <h1 class=" reveal text-center text-5xl text-slate-100" >Everything You need to run your books.</h1>
+                    <h6 class=" reveal text-center mx-auto mt-6 max-w-xl text-slate-100">
                         Well everything you need if  you aren't that picky about minor details like tax compliance. 
                     </h1>
-            </div>
-
-            <div class="bg-red-500  bg-scroll mx-auto overflow-x-scroll ">
-                <div class="w-[600px] flex justify-between ">
-                    <div class="bg-yellow-100">
-                        <button>Payroll</button>
-                    </div>
-                    <div class="bg-green-200">
-                        <button>Claim expenses</button>
-                    </div>
-                    <div class="bg-cyan-300">
-                        <button>Vat handling</button>
-                    </div>
-                    <div>
-                        <button>Reporting</button>
-                    </div>
                 </div>
-                
             </div>
 
-    </section> -->
+            <!-- box -->
+            <div class="reveal2 container mx-auto ">
+                <!-- second container start -->
+                <div class="pl-3 xs:pl-0 lg:px-0 grid  lg:grid-cols-2  container  rounded-t-md mx-auto   "> 
+                    <!-- text section start -->
+                    <div class="">
+                        <div class=" bg-blue-500 rounded-xl lg:rounded-0  mx-auto h-44 lg:bg-transparent pb-36 pt-10  lg:px-0 lg:pb-0 lg:pt-0">
+                            <div class="   w-[65%] h-16 sm:h-auto xs:w-auto sm:w-auto    sm:relative  overflow-x-scroll sm:overflow-x-hidden  lg:w-auto">
+                                <ul class=" px-5  sm:px-0 sm:overflow-x-hidden w tabs w-[900px] xs:w-auto sm:w-auto  lg:pl-5 lg:ml- lg:mt-16  flex sm:justify-center  items-center lg:flex-col space-x-6 lg:space-x-0 ">
+                                    <!-- text for payroll -->
+                                    <li id="payroll"  class=" 2xl:rounded-xl lg:bg-auto flex justify-center rounded-full   w-[100px] lg:h-auto lg:rounded-none lg:w-auto  lg:block 
+                                            live  sm:hover:bg-blue-50 cursor-pointer    sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl  ">
+                                        <button  class="color h-10 text-md  lg:text-xl text-center lg:text-left text-slate-50  w-50 px-6 lg:px-0 lg:w-0 lg:mb-2 rounded-3xl ">
+                                            Payroll     
+                                        </button>
+                                        <p class=" text-slate-50 text-sm hidden max-w-xl lg:flex ">Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
+                                    </li>
+                                    
+                                    <!-- text for claim -->
+                                    <li id="expenses"  class=" 2xl:rounded-xl   lg:bg-auto flex justify-center items-center rounded-full  h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block  
+                                    sm:hover:bg-blue-50  cursor-pointer  sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl ">
+                                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
+                                        Claim expenses   
+                                        </button>
+                                        <p class="text-slate-50 text-sm hidden max-w-xl  lg:flex">All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
+                                    </li>  
+                                
+                                    <!-- text for vat -->
+                                    <li id="vat" class=" 2xl:rounded-xl  lg:bg-auto flex justify-center items-center rounded-full h-10 w-[180px] lg:h-auto lg:rounded-none lg:w-auto  lg:block
+                                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
+                                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 w-full h-10 rounded-3xl">
+                                    VAT handling
+                                        </button>
+                                        <p class="text-slate-50 text-sm hidden max-w-xl lg:flex">
+                                            We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.
+                                        </p>
+                                    </li>
+
+                                    <!-- text for reporting -->
+                                    <li id="report"  class=" 2xl:rounded-xl lg:bg-auto flex justify-center items-center rounded-full h-10 w-[100px] lg:h-auto  lg:rounded-none lg:w-auto  lg:block
+                                    sm:hover:bg-blue-50 cursor-pointer sm:hover:bg-opacity-10 lg:py-5 lg:px-8 lg:rounded-l-2xl">
+                                        <button class=" text-md lg:text-xl lg:text-left text-slate-50 lg:mb-2 h-10 rounded-3xl w-full">
+                                        Reporting  
+                                        </button>
+                                        <p class="text-slate-50 text-sm max-w-xl hidden lg:flex">Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- text section end -->
+                    <!-- payroll-image in large device start-->
+                    <div class=" w-[1000px]  sm:w-auto lg:h-[650px] lg:w-[1000px] lg:basis-11/12  rounded-2xl overflow-hidden"> 
+                            <div class="rounded-xl">
+                                <img id="payrollImage" class="w-[800px] sm:w-auto" src="../assests/image/payroll.webp" alt="">
+                            </div>
+                    </div>
+                    <!-- payroll-image in large device end-->
+                </div>
+                <!-- second container end -->
+                <!-- change text in small device start -->
+                <div class=" ml-3 lg:ml-0 bg-blue-500 pb-20 lg:pb-0 -mt-[600px] sm:-mt-[500px] text-left sm:text-center tab-content lg:hidden  md:-mt-[600px] " >
+                        <div class="content active">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  " >Keep track of everyone's salaries and whether or not they have been paid. Direct deposit not supported</p>
+                        </div>
+
+                        <div class="content">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto "> All of your receipts organized in one place, as long as you don't mind typing in the data by hand.</p>
+                        </div>
+
+                        <div class="content">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> We only sell our software who don’t deal with VAT at all so technically we do all the VAT stuff they need.</p>
+                        </div>
+
+                        <div class="content">
+                            <p class="text-slate-50 text-sm  max-w-md text-md px-2 mx-auto  "> Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.</p>
+                        </div>
+                </div>
+                <!-- change text end -->
+
+            </div>
+        </div>
+
+    <!-- next section start -->
     <section class=" pb-8  overflow-hidden">
-
-        <div class=" container px-5 bg-red-500 mx-auto py-9">
+        <!-- title start -->
+        <div class=" container px-5  mx-auto py-20">
             <div class="text-left  sm:text-center mb-10">
-                <h1 class="text-3xl font-bold sm:text-5xl mb-8">Simplify everyday business tasks.</h1>
-                <p class=" max-w-xl sm:mx-auto">Because you’d probably be a little confused if we suggested you complicate your everyday business tasks instead.</p>
+                <h1 class="dark:text-slate-50 reveal text-3xl font-bold sm:text-5xl mb-8">Simplify everyday business tasks.</h1>
+                <p class="dark:text-slate-100 reveal max-w-xl sm:mx-auto">Because you’d probably be a little confused if we suggested you complicate your everyday business tasks instead.</p>
             </div>
-        </div>    
+        </div> 
+        <!-- title end -->
 
-        <div class="flex divGroup lg:container mx-auto flex-col lg:flex-row">
-           
+        <div class="flex gap-5  xl:px-8 divGroup lg:container mx-auto flex-col lg:flex-row">
+        
             <!-- REPORTING -->
-                <div class="btn1  group gp change lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-500 max-w-2xl  border  px-5 container mx-auto ">
-                     <div class="bgColorBlue  mb-4 bg-blue-500 group-hover:bg-slate-900 lg:bg-slate-500 w-9 flex justify-center items-center rounded-lg px">
+                <div class="dark:bg-slate-300 lg:mb-20 rounded-xl reveal1 btn1  group gp change lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-500 max-w-2xl   px-5 container mx-auto ">
+                    <!-- reporting image logo start -->
+                    <div class="bgColorBlue mt-10   mb-4 bg-blue-500 lg:group-hover:bg-slate-900 lg:bg-slate-500 w-9 flex justify-center items-center rounded-lg px"> 
                         <svg aria-hidden="true" class="h-9 w-9" fill="none">
                             <defs>
                                 <linearGradient id=":rc:" x1="11.5" y1="18" x2="36" y2="15.5" gradientUnits="userSpaceOnUse">
@@ -345,78 +538,86 @@
                             </defs>
                                 <path d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5" stroke="url(#:rc:)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                 </div>
-                
+                    </div>
+                    <!-- reporting image logo end -->
                     <h4 class="colorBlue  mb-4 text-blue-500 lg:group-hover:text-slate-900 lg:text-slate-500">Reporting</h4>
                     <h2 class=" mb-4  text-xl">Stay on tops of things with always up-to-date reporting features.</h2>
                     <p class="mb-20 text-sm  ">We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.</p>
-                
-                   
                 </div>
-              
-                       
-                <div class="  mb-20  w-full lg:hidden h-96 bg-slate-400">
+                <!-- reporting image hidden in large device start -->
+                <div class="reveal  mb-20  w-full lg:hidden h-96 bg-slate-400">
                     <div class="ml-5 sm:ml-auto w-[800px] md:container mx-auto -mt-14 border overflow-hidden rounded-xl">
                         <div class="">
                             <img src="../assests/image/profit-loss.webp" alt="">
                         </div>
                     </div>
                 </div>
+                <!-- reporting image hidden in large device end -->
                         
-                  
-              
-              <!-- INVENTORY -->
-                <div class="btn2 group gp lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-500 max-w-2xl  border  px-5 container mx-auto">
-                    <div class="bgColorBlue lg:group-hover:bg-slate-800 mb-4 bg-blue-500 lg:bg-slate-500 w-9 flex justify-center items-center rounded-lg px">
+                
+            
+            <!-- INVENTORY -->
+                <div class="dark:bg-slate-300 lg:mb-20 rounded-xl reveal1 btn2 group gp lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-500 max-w-2xl   px-5 container mx-auto">
+                    <!-- inventory logo start -->
+                    <div class="bgColorBlue mt-10 lg:group-hover:bg-slate-800 mb-4 bg-blue-500 lg:bg-slate-500 w-9 flex justify-center items-center rounded-lg px">
                         <svg aria-hidden="true" class="h-9 w-9" fill="none">
                             <path opacity=".5" d="M8 17a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z" fill="#fff"></path><path opacity=".3" d="M8 24a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z" fill="#fff"></path><path d="M8 10a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2Z" fill="#fff"></path>
                         </svg>      
                     </div>
+                    <!-- inventory logo end -->
                     <h4 class="colorBlue group-hover:text-slate-800 mb-4  text-blue-500 lg:text-slate-500">Inventory</h4>
                     <h2 class="mb-4 text-xl">Never lose track of what's in stock with accurate inventory tracking</h2>
                     <p  class="mb-20 text-sm">We don't offer this as part of our software but that statement is inarguably true. Accutrate inventory tracking would help you for sure.</p> 
                 </div>
-
-                <div class="  mb-20  w-full lg:hidden h-96 bg-slate-400">
+                <!-- inventory image hidden in large device start -->
+                <div class="reveal  mb-20  w-full lg:hidden h-96 bg-slate-400">
                     <div class="ml-5 sm:ml-auto w-[800px] md:container mx-auto -mt-14 border overflow-hidden rounded-xl">
                         <div class="">
                             <img src="../assests/image/inventory.webp" alt="">
                         </div>
-                     
+                    
                     </div>
                 </div>
-             
+                <!-- inventory image hidden in large device end -->
+            
                 <!-- CONTACT -->
 
-                <div class="btn3 gp group lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-600 max-w-2xl border px-5 container mx-auto">
-                    <div class="bgColorBlue lg:group-hover:bg-slate-800 mb-4 bg-blue-500 lg:bg-slate-500  w-9 flex justify-center items-center rounded-lg px">
+                <div class="dark:bg-slate-300 rounded-xl lg:mb-20 reveal1 btn3 gp group lg:cursor-pointer lg:hover:text-slate-900 lg:text-slate-600 max-w-2xl  px-5 container mx-auto">
+                <!-- contacts start -->
+                    <div class="bgColorBlue mt-10 lg:group-hover:bg-slate-800 mb-4 bg-blue-500 lg:bg-slate-500  w-9 flex justify-center items-center rounded-lg px">
                         <svg aria-hidden="true" class="h-9 w-9" fill="none"><path opacity=".5" d="M25.778 25.778c.39.39 1.027.393 1.384-.028A11.952 11.952 0 0 0 30 18c0-6.627-5.373-12-12-12S6 11.373 6 18c0 2.954 1.067 5.659 2.838 7.75.357.421.993.419 1.384.028.39-.39.386-1.02.036-1.448A9.959 9.959 0 0 1 8 18c0-5.523 4.477-10 10-10s10 4.477 10 10a9.959 9.959 0 0 1-2.258 6.33c-.35.427-.354 1.058.036 1.448Z" fill="#fff"></path><path d="M12 28.395V28a6 6 0 0 1 12 0v.395A11.945 11.945 0 0 1 18 30c-2.186 0-4.235-.584-6-1.605ZM21 16.5c0-1.933-.5-3.5-3-3.5s-3 1.567-3 3.5 1.343 3.5 3 3.5 3-1.567 3-3.5Z" fill="#fff"></path>
                         </svg>
                     </div>
+                <!-- contacts end -->
                     <h4 class="colorBlue group-hover:text-slate-900 mb-4 text-blue-500 lg:text-slate-500" >Contacts</h4>
                     <h2 class="mb-4 text-xl">Organize all of your contats, service providers, and invoices in one place.</h2>
                     <p class="mb-20 text-sm  ">This also isn't actually a feature, it's just some friendly advice. We dfinitely recomend that you do this, you'll feel really organized and professional.</p>
                 </div>
-                
-                <div class="  mb-20  w-full lg:hidden h-96 bg-slate-400">
+                <!-- contact image hidden in large device start -->
+                <div class="reveal  mb-20  w-full lg:hidden h-96 bg-slate-400">
                     <div class="ml-5 sm:ml-auto w-[800px] md:container mx-auto -mt-14 border overflow-hidden rounded-xl">
                         <div class="">
                             <img src="../assests/image/contacts.webp" alt="">
                         </div>
-                     
+                    
                     </div>
                 </div>
+                <!-- contact image hidden in large device end -->
 
-            </div>
+        </div>
 
-        <!-- LG: DEVICE -->
-        <div class="lg:pb-20">
+        <!-- LG: DEVICE start-->
+        <div class=" lg:pb-20">
 
-                <div >
-                    <div class="container mx-auto bg-blue-500 hidden lg:flex  lg:py-0 relative">
-                        
+                <div>
+                    <!-- container start -->
+                    <div class="reveal2 container mx-auto  hidden lg:flex  lg:py-0 relative">
+                        <!-- rectangle rounded corners start -->
                         <div class="w-[1200px] relative items-center overflow-hidden mx-auto container lg:flex rounded-3xl lg:h-[550px] bg-slate-300 border">
+                        <!-- left part start-->
                             <div class="bg-slate-300 z-50 bg-opacity-30 w-10 h-full"></div>
+                        <!-- left part end -->
+                        <!-- image container start -->
                             <div class="absolute flex items-center z-10">
                                 <div class="img1 ml-20 mr-10  w-[800px]">
                                     <img class="w-full rounded-xl" src="../assests/image/profit-loss.webp" alt="">
@@ -428,173 +629,441 @@
                                     <img class="w-full rounded-xl" src="../assests/image/contacts.webp" alt="">
                                 </div>
                             </div>
+                            <!-- image container end -->
+                            <!-- right part start -->
                             <div class="z-50  absolute  left-[900px] bg-slate-300 bg-opacity-30 h-full w-[600px] "></div>   
+                            <!-- right part end -->
                         </div> 
-                        
+                        <!-- rectangle rounded corners end -->
                     </div>
+                    <!-- container end -->
                 </div>
 
         </div>
+        <!-- lg:device end -->
 
-        <!-- <div class=" bg-[url('/assests/image/background-features.5f7a9ac9.jpg')] object-contain h-[400px] min-w-screen">
+        <!-- <div class=" bg-[url('/assests/image/background-features.5f7a9ac9.jpg')] object-contain h-[400px] min-w-screen"> </div> -->
 
-        </div> -->
-        <div class="relative w-full max-h-96 overflow-hidden">
+        <div class="relative w-full h-[400px] lg:h-96 overflow-hidden">
+            <!-- background image start -->
             <img src="../assests/image/background-features.5f7a9ac9.jpg" alt="Avatar" class="object-cover w-full h-full" />
+            <!-- background image end -->
+            <!-- text start -->
             <div class="absolute w-full  top-20 ">
                 <div class="text-center max-w-lg mx-auto">
-                    <h1 class=" text-4xl font-bold text-slate-50 mb-7">Get started today</h1>
-                    <p class="text-lg leading-9 text-slate-50 mb-7">It's time to take control of your books.Buy our software so you can feel like you are doing something productive.</p>
+                    <h1 class="reveal text-4xl font-bold text-slate-50 dark:text-slate-900 mb-7 text">Get started today</h1>
+                    <p class="reveal text-lg leading-9 text-slate-50 mb-7 dark:text-slate-900">It's time to take control of your books.Buy our software so you can feel like you are doing something productive.</p>
 
-                    <button class="bg-slate-50 px-11 py-3 rounded-full ">Get 6 months free</button>
+                    <button class="reveal bg-slate-50 px-11 py-3 rounded-full dark:bg-slate-900 dark:text-slate-50 dark:hover:shadow-[0px_0px_10px_5px_rgba(0,0,0,0.8)] ">Get 6 months free</button>
 
                 </div>
             </div>
-          </div>
+            <!-- text end -->
+        </div>
 
     </section>
+    <!-- next section end -->
+    </section>
+ 
+    
+    
 
     <!-- textimonials -->
-    <section>
+    <section id="testimonial">
+        <!-- title start -->
         <div class="container mx-auto text-center py-20">
-            <h1 class="text-4xl mb-7">Loved by businesses worldwide</h1>
-            <p class="text-lg max-w-2xl leading-9 mx-auto">Our software is so simple that people can’t help but fall in love with it. Simplicity is easy when you just skip tons of mission-critical features.</p>
+            <h1 class="dark:text-slate-50 reveal text-4xl mb-7">Loved by businesses worldwide</h1>
+            <p class="dark:text-slate-100 reveal text-lg max-w-7xl leading-9 mx-auto">Our software is so simple that people can’t help but fall in love with it. Simplicity is easy when you just skip tons of mission-critical features.</p>
+        </div>
+        <!-- title end -->
+        <div class="lg:grid lg:grid-cols-3 gap-5 container  pb-[100px] px-5 mx-auto">
+            <!-- first column -->
+            <div>
+                <!--  about sheryl  start-->
+                <div class="reveal dark:bg-slate-50  dark:border dark:shadow-lg dark:shadow-slate-400 bg-red-50 max-w-2xl rounded-xl mx-auto mb-5  p-8">
+                    <p class="">TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.</p>
+                    <hr class="mt-14 mb-5">
+                    <div class="flex justify-between">
+                        <div class="">
+                            <h1 class="">Sheryl Berge</h1>
+                            <h3>CEO at Lynch LLC</h3>
+                        </div>
+                        <div class="w-14 ">
+                            <img class="rounded-full" src="../assests/image/profile/sheryl.webp" alt="">
+                        </div>
+                    </div> 
+                </div>
+                <!--  about sheryl  end-->
+                <!-- about Amy start -->
+                <div class="reveal dark:bg-slate-50 dark:border dark:shadow-lg dark:shadow-slate-400 bg-red-50 max-w-2xl rounded-xl mx-auto mb-5 lg:mb-auto  p-8">
+                    <p class="">I’m trying to get a hold of someone in support, I’m in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.</p>
+                    <hr class="mt-14 mb-5">
+                    <div class="flex justify-between">
+                        <div class="">
+                            <h1 class="">Amy Hahn</h1>
+                            <h3>Director at velocies industries</h3>
+                        </div>
+                        <div class="w-14 ">
+                            <img class="rounded-full" src="../assests/image/profile/amy.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- about Amy end --> 
+            </div>
+            <!-- first column end -->
+
+            <!-- second column -->
+            <div>
+                <!-- bout leland -->
+                <div class="reveal dark:bg-slate-50 dark:border dark:shadow-lg dark:shadow-slate-400 bg-red-50 max-w-2xl rounded-xl mx-auto  mb-5 p-8">
+                    <p class="">The best part about TaxPal is every time I pay my employees, my bank balance doesn’t go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                    <hr class="mt-14 mb-5">
+                    <div class="flex justify-between">
+                        <div class="">
+                            <h1 class=""> Leland Kiehn</h1>
+                            <h3>Founder of Kiehn and Sons</h3>
+                        </div>
+                        <div class="w-14 ">
+                            <img class="rounded-full" src="../assests/image/profile/leland.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- about leland end -->
+
+                <div class="reveal dark:bg-slate-50 dark:border dark:shadow-lg dark:shadow-slate-400 bg-red-50 max-w-2xl rounded-xl mx-auto mb-5 lg:mb-auto  p-8">
+                    <p class="">There are so many things I had to do with my old software that I just don’t do at all with TaxPal. Suspicious but I can’t say I don’t love it.</p>
+                    <hr class="mt-14 mb-5">
+                    <div class="flex justify-between">
+                        <div class="">
+                            <h1 class="">Erin Powlowski</h1>
+                            <h3>COO at Armstrong Inc</h3>
+                        </div>
+                        <div class="w-14 ">
+                            <img class="rounded-full" src="../assests/image/profile/Erin.webp" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+              
+            </div>
+            <!-- third column -->
+            <div>
+                <div class="reveal dark:bg-slate-50 dark:border dark:shadow-lg dark:shadow-slate-400 bg-red-50 max-w-2xl rounded-xl mx-auto mb-5   p-8">
+                    <p class="">I used to have to remit tax to the EU and with TaxPal I somehow don’t have to do that anymore. Nervous to travel there now though.</p>
+                    <hr class="mt-14 mb-5">
+                    <div class="flex justify-between">
+                        <div class="">
+                            <h1 class="Peter Renolds">Peter Ronolds</h1>
+                            <h3>founder of West Inc</h3>
+                        </div>
+                        <div class="w-14 ">
+                            <img class="rounded-full" src="../assests/image/profile/peter.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal dark:bg-slate-50     dark:border dark:shadow-lg dark:shadow-slate-400 bg-red-50 max-w-2xl rounded-xl mx-auto mb-5 lg:mb-auto  p-8">
+                    <p class="">This is the fourth email I’ve sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.</p>
+                    <hr class="mt-14 mb-5">
+                    <div class="flex justify-between">
+                        <div class="">
+                            <h1 class="">Amy Hahn</h1>
+                            <h3>Director at velocies industries</h3>
+                        </div>
+                        <div class="w-14 ">
+                            <img class="rounded-full" src="../assests/image/profile/amy.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-slate-900 pb-48">
+        <div>
+            <div class="text-center py-20">
+                <h1 class="reveal text-4xl mb-7 text-white font-bold ">
+                    <span class="relative">
+                    Simple Pricing,
+                    <span>
+                        <svg aria-hidden="true" viewBox="0 0 281 40" class="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" preserveAspectRatio="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M240.172 22.994c-8.007 1.246-15.477 2.23-31.26 4.114-18.506 2.21-26.323 2.977-34.487 3.386-2.971.149-3.727.324-6.566 1.523-15.124 6.388-43.775 9.404-69.425 7.31-26.207-2.14-50.986-7.103-78-15.624C10.912 20.7.988 16.143.734 14.657c-.066-.381.043-.344 1.324.456 10.423 6.506 49.649 16.322 77.8 19.468 23.708 2.65 38.249 2.95 55.821 1.156 9.407-.962 24.451-3.773 25.101-4.692.074-.104.053-.155-.058-.135-1.062.195-13.863-.271-18.848-.687-16.681-1.389-28.722-4.345-38.142-9.364-15.294-8.15-7.298-19.232 14.802-20.514 16.095-.934 32.793 1.517 47.423 6.96 13.524 5.033 17.942 12.326 11.463 18.922l-.859.874.697-.006c2.681-.026 15.304-1.302 29.208-2.953 25.845-3.07 35.659-4.519 54.027-7.978 9.863-1.858 11.021-2.048 13.055-2.145a61.901 61.901 0 0 0 4.506-.417c1.891-.259 2.151-.267 1.543-.047-.402.145-2.33.913-4.285 1.707-4.635 1.882-5.202 2.07-8.736 2.903-3.414.805-19.773 3.797-26.404 4.829Zm40.321-9.93c.1-.066.231-.085.29-.041.059.043-.024.096-.183.119-.177.024-.219-.007-.107-.079ZM172.299 26.22c9.364-6.058 5.161-12.039-12.304-17.51-11.656-3.653-23.145-5.47-35.243-5.576-22.552-.198-33.577 7.462-21.321 14.814 12.012 7.205 32.994 10.557 61.531 9.831 4.563-.116 5.372-.288 7.337-1.559Z"></path>
+                        </svg>
+                    </span>
+                    </span>
+                     for everyone</h1>
+                <p class="reveal text-lg text-white">It doesn't matter what size your business is, our software won't work well for you</p>
+            </div>
+        </div>
+        <div class="container px-5 mx-auto lg:grid lg:gap-3 lg:grid-cols-3  ">
+            <!-- first price -->
+            <div class="reveal bg-blue-700 dark:shadow-md dark:shadow-slate-300 lg:hidden max-w-3xl mx-auto rounded-3xl mb-5 lg:mb-auto p-10">
+                <h1 class="text-4xl mb-5 text-white font-bold">$15</h1>
+                <h2 class="text-md mb-4 text-white mt-5">Small business</h2>
+                <h3 class="text-md mb-5 text-white mt-5 ">Perfect for small/ medium sized businesses.</h3>
+                <button class="bg-slate-50 mb-5 rounded-full w-full text-center py-2 px-4">Get started</button>
+                <div class="leading-8">
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Send 25 quotes and invoices</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Connect up to 5 bank accounts</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Track up to 50 expenses per month</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Automated payroll support</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Export up to 12 reports</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Bulk reconcile transactions</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Track in multiple currencies</div> </div>
+                </div>
+            </div>
+            <!-- second price -->
+            <div class="reveal dark:border dark:shadow-md lg:pb-24 dark:shadow-slate-300 max-w-3xl mx-auto rounded-3xl mb-5 lg:mb-auto p-10">
+                <h1 class="text-4xl mb-5 text-white font-bold">$9</h1>
+                <h2 class="text-md mb-4 text-white mt-5">Starter</h2>
+                <h3 class="text-md mb-5 text-white mt-5 lg:max-w-[280px]">Good for anyone who is self-employed and just getting started.</h3>
+                <button class="bg-slate-50 dark:bg-slate-900 dark:text-slate-50 dark:hover:border-2 dark:border mb-5 rounded-full w-full text-center py-2 px-4">Get started</button>
+                <div class="">
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Send 10 quotes and invoices</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Connect up to 2 bank accounts</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Track up to 15 expenses per month</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Manual payroll support</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Export up to 3 reports</div> </div>
+                </div>
+            </div>
+
+            <!-- lg -->
+            
+            <div class="reveal bg-blue-700 dark:shadow-md dark:shadow-slate-300 hidden lg:flex  max-w-3xl mx-auto rounded-3xl  p-10">
+                <div class="w-full ">
+                <h1 class="text-4xl mb-5 text-white font-bold">$15</h1>
+                <h2 class="text-md mb-4 text-white mt-5 ">Small business</h2>
+                <h3 class="text-md mb-5 text-white mt-5 lg:max-w-[280px]">Perfect for small/ medium sized businesses.</h3>
+                <button class="bg-slate-50 mb-5 rounded-full w-full text-center py-2 px-4">Get started</button>
+                <div class="leading-8">
+
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Send 25 quotes and invoices</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Connect up to 5 bank accountss</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Track up to 50 expenses per month</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Automated payroll support</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Export up to 12 reports</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Bulk reconcile transactions</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Track in multiple currencies</div> </div>
+                </div>
+            </div>
+            </div>
+        
+            <!-- third price -->
+            <div class="reveal2 dark:border dark:shadow-md dark:shadow-slate-300  max-w-3xl mx-auto rounded-3xl p-10">
+                <h1 class="text-4xl mb-5 text-white font-bold">$39</h1>
+                <h2 class="text-md mb-4 text-white mt-5">Enterprise</h2>
+                <h3 class="text-md mb-5 text-white mt-5 lg:max-w-[280px]">For even the biggest enterprise companies.</h3>
+                <button class="bg-slate-50 dark:bg-slate-900 dark:text-slate-50 dark:hover:border-2 dark:border mb-5 rounded-full w-full text-center py-2 px-4">Get started</button>
+                <div class="leading-8">
+
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Send 25 quotes and invoices</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Connect up to 15 bank accounts</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Track up to 200 expenses per month</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Automated payroll support</div> </div>
+                    <div class="flex mb-3 items-start"><span class="flex  items-center mr-4 lg:mt-1 xl:mt-auto   text-slate-300"> <i class="fa-regular fa-circle-check"></i>    </span><div class="text-slate-200  text-sm">Export up to 25 reports, including TPS</div> </div>
+                </div>
+            </div>
         </div>
     </section>
-
-  <script>
-
-    // dark mode icon
-    const switchToggle = document.querySelector('#switch-toggle');
-    let isDarkmode = false
+    <!-- Questions  -->
+    <section>
+       <div class="relative ">
+            <img alt="" src="../assests/image/background-faqs.55d2e36a.jpg" class="-z-10 absolute w-full h-[2150px] sm:h-[1600px] md:h-[1500px] lg:h-[1150px] xl:h-[1100px] 3xl:h-[900px]" >
     
-    const darkIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>`
-    
-    const lightIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>`
-    
-    function toggleTheme (){
-      isDarkmode = !isDarkmode
-      localStorage.setItem('isDarkmode', isDarkmode)
-      switchTheme()
-    }
-    
-    function switchTheme (){
-      if (isDarkmode) {
-        switchToggle.classList.remove('bg-yellow-500','-translate-x-2')
-        switchToggle.classList.add('bg-gray-700','translate-x-full')
-        setTimeout(() => {
-          switchToggle.innerHTML = darkIcon
-        }, 250);
-      } else {
-        switchToggle.classList.add('bg-yellow-500','-translate-x-2')
-        switchToggle.classList.remove('bg-gray-700','translate-x-full')
-        setTimeout(() => {
-          switchToggle.innerHTML = lightIcon
-        }, 250);
-      }
-    }
-    
-    switchTheme()
+            <div class="">
+                <div class="container  mx-auto tex-left px-5 py-20">
+                    <h1 class="reveal text-3xl font-bold mb-8">Frequently asked questions</h1>
+                    <p class="reveal text-xl max-w-3xl leading-2">If you can't find what you are looking for, email our support team, if you're lucky someone will get back to you.</p>
+                </div>
+                <div   class="container lg:grid lg:grid-cols-3 gap-5 mx-auto px-5">
 
-    // switch image
+                    <div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">Does TaxPal handle VAT?</h1>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">Can I pay for my subscription via purchase order?</h1>
+                            <p class="text-sm">Absolutely, we are happpy to take your money in all forms.</p>
+                        </div>
+                        <div class="reveal mb-8" >
+                            <h1 class="text-bold text-xl mb-4">How do I apply for a job at Taxpal?</h1>
+                            <p class="text-sm">TaxPal is just a software application, ultimately your books are your responsibility.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">What was that testimonial about tax fraud all about?</h1>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">TaxPal sounds horrible but why do I still feel compelled to purchase?</h1>
+                            <p class="text-sm">This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.</p>
+                        </div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">I found other companies called TaxPal, are you sure you can use this name?</h1>
+                            <p class="text-sm">Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">How do you generate reports?</h1>
+                            <p class="text-sm">You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.</p>
+                        </div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">Can we expect more inventory features?</h1>
+                            <p class="text-sm">In life it’s really better to never expect anything at all.</p>
+                        </div>
+                        <div class="reveal mb-8">
+                            <h1 class="text-bold text-xl mb-4">I lost my password, how do I get into my account?</h1>
+                            <p class="text-sm">Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container mx-auto mt-20">   
+                        <div class="reveal flex justify-center">
+                            <svg aria-hidden="true" viewBox="0 0 109 40" class="h-10">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 20c0 11.046 8.954 20 20 20s20-8.954 20-20S31.046 0 20 0 0 8.954 0 20Zm20 16c-7.264 0-13.321-5.163-14.704-12.02C4.97 22.358 6.343 21 8 21h24c1.657 0 3.031 1.357 2.704 2.98C33.32 30.838 27.264 36 20 36Z" fill="#2563EB"></path>
+                                <path d="M55.528 26.57V15.842H52V13.97h9.108v1.872h-3.636V26.57h-1.944Z" fill="#0F172A"></path> -->
+                                <path d="M83.084 26.57v-12.6h5.346c.744 0 1.416.18 2.016.54a3.773 3.773 0 0 1 1.44 1.44c.36.612.54 1.302.54 2.07 0 .78-.18 1.482-.54 2.106a4 4 0 0 1-1.44 1.494c-.6.36-1.272.54-2.016.54h-2.646v4.41h-2.7Zm2.664-6.84h2.376c.288 0 .546-.072.774-.216.228-.156.408-.36.54-.612a1.71 1.71 0 0 0 .216-.864c0-.324-.072-.606-.216-.846a1.394 1.394 0 0 0-.54-.576 1.419 1.419 0 0 0-.774-.216h-2.376v3.33ZM106.227 26.57V13.25h2.556v13.32h-2.556Z" fill="#2563EB"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M95.906 26.102c.636.432 1.35.648 2.142.648.444 0 .864-.066 1.26-.198a4.25 4.25 0 0 0 1.062-.558 3.78 3.78 0 0 0 .702-.668v1.244h2.574v-9.522h-2.538v1.248a3.562 3.562 0 0 0-.648-.672 3.13 3.13 0 0 0-1.026-.558 3.615 3.615 0 0 0-1.278-.216c-.828 0-1.566.216-2.214.648-.648.42-1.164 1.002-1.548 1.746-.372.732-.558 1.578-.558 2.538 0 .96.186 1.812.558 2.556.372.744.876 1.332 1.512 1.764Zm4.104-1.908c-.36.228-.78.342-1.26.342-.468 0-.882-.114-1.242-.342a2.387 2.387 0 0 1-.828-.954c-.204-.42-.306-.906-.306-1.458 0-.54.102-1.014.306-1.422.204-.408.48-.726.828-.954.36-.24.774-.36 1.242-.36.48 0 .9.12 1.26.36.36.228.636.546.828.954.204.408.306.882.306 1.422 0 .552-.102 1.038-.306 1.458a2.218 2.218 0 0 1-.828.954Z" fill="#2563EB"></path><path fill-rule="evenodd" clip-rule="evenodd" d="m76.322 23.197 2.595 3.373h2.268l-3.662-4.787 3.338-4.663h-2.196l-2.162 3.334-2.554-3.334h-2.34l3.652 4.71-3.634 4.74h2.196l2.5-3.373ZM62.738 26.102a3.78 3.78 0 0 0 2.142.648c.456 0 .888-.072 1.296-.216.42-.144.798-.336 1.134-.576a3.418 3.418 0 0 0 .864-.835v1.447h1.872v-9.45h-1.872v1.45a3.118 3.118 0 0 0-.72-.82 3.2 3.2 0 0 0-1.062-.612 4.033 4.033 0 0 0-1.35-.216c-.828 0-1.578.21-2.25.63-.66.42-1.188 1.002-1.584 1.746-.384.732-.576 1.572-.576 2.52 0 .936.192 1.776.576 2.52.384.744.894 1.332 1.53 1.764Zm4.122-1.476c-.432.276-.93.414-1.494.414a2.682 2.682 0 0 1-1.476-.414 2.987 2.987 0 0 1-1.008-1.134c-.24-.492-.36-1.05-.36-1.674 0-.612.12-1.158.36-1.638.252-.48.588-.858 1.008-1.134a2.682 2.682 0 0 1 1.476-.414c.564 0 1.062.138 1.494.414.432.276.768.654 1.008 1.134.252.48.378 1.026.378 1.638 0 .624-.126 1.182-.378 1.674-.24.48-.576.858-1.008 1.134Z" fill="#0F172A"></path> --> -->
+                            </svg>
+                            
+                        </div>
+                        <div class="container mx-auto mt-5 ">
+                            <ul class="flex justify-center space-x-6">
+                            <a href="#feature"><li class="reveal cursor-pointer">Features</li></a> 
+                            <a href="#testimonial"><li class="reveal cursor-pointer">Testimonials</li></a> 
+                            <a href="#pricing"><li class="reveal cursor-pointer">Pricing</li></a> 
+                            </ul>
+                        </div>
+                        <div class="container mx-auto px-5 mt-20 pt-10 border-t-2 bg-transparent py-10 sm:py-10">
+                        <div class="flex justify-between flex-col text-center sm:text-auto sm:flex-row ">
+                            <div class="sm:hidden space-x-5 mb-5">
+                                <span class=" text-xl text-slate-500 hover:text-slate-900 cursor-pointer "><i class="fa-brands fa-twitter"></i></span>
+                                <span class=" text-xl text-slate-500 hover:text-slate-900 cursor-pointer "><i class="fa-brands fa-github"></i></span>
+                            </div>
+                            <div class=" text-sm">Copyright © 2023 TaxPal. All rights reserved</div>
+                            <div class=" hidden   sm:flex space-x-5">
+                                <span class=" text-xl text-slate-500 hover:text-slate-900 cursor-pointer "><i class="fa-brands fa-twitter"></i></span>
+                                <span class=" text-xl text-slate-500 hover:text-slate-900 cursor-pointer "><i class="fa-brands fa-github"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    // change image
-    let img = document.getElementById("payrollImage");
-    let payroll = document.getElementById("payroll");
-    let expenses = document.getElementById("expenses");
-    let vat = document.getElementById("vat");
-    let report =document.getElementById("report")
-
-    payroll.addEventListener("click",()=>{
-        img.src="../assests/image/payroll.webp"
-    })
-    expenses.addEventListener("click",()=>{
-        img.src="../assests/image/expenses.webp"
-    })
-    vat.addEventListener("click",()=>{
-        img.src="../assests/image/vat-returns.webp"
-    })
-    report.addEventListener("click",()=>{
-        img.src="../assests/image/reporting.webp"
-    })
-
-    // change TABS bg-color when i click on button
-    
- const tabs = document.querySelectorAll(".tabs  li");
- const tabContent = document.querySelectorAll(".content")
- const btn = document. querySelectorAll("li button")
- tabs.forEach((tab,index)=>{
-    tab.addEventListener("click",()=>{
-        tabs.forEach((tab)=>{
-            tab.classList.remove("live")
-            
-        })
-
-        tabContent.forEach((content)=>{
-            content.classList.remove("active")
-        })
-
-        btn.forEach((tab)=>{
-            tab.classList.remove("color")
-        })
-
-        btn[index].classList.add("color")
-        tabContent[index].classList.add("active")
-        tabs[index].classList.add("live")
-        
-    })
- })
-
-//  var count = 1;
-
-// function setColor(btn, color) {
-//   var property = document.getElementById(btn);
-//   if (count == 0) {
-//     property.style.backgroundColor = "white";
-//     count = 1;
-//   } else {
-//     property.style.backgroundColor = color;
-//     count = 0;
-//   }
-// }
+    </section>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script>
+    // ScrollReveal
+ScrollReveal().reveal('.reveal', {
+ delay: 700,
+ origin:"bottom",
+ distance:"50px",
+ reset:true,
+ interval: 200,
+ scale:0.85,
  
+}
 
-// change color not to work hover effect after changing color
-const groups = document.querySelectorAll(".divGroup .gp");
+);
+ScrollReveal().reveal('.reveal1', {
+ delay: 500,
+ origin:"bottom",
+ distance:"50px",
+ reset:true,
+ interval: 200,
+ scale:0.85,
  
- groups.forEach((group,index)=>{
-    group.addEventListener("click",()=>{
-        groups.forEach((group)=>{
-            group.classList.remove("change");
-        })
-        groups[index].classList.add("change")
-    })
- })
+}
+);
+ScrollReveal().reveal('.reveal2', {
+ delay: 500,
+ duration:1000,
+ origin:"bottom",
+ distance:"100px",
+ reset:true,
+ interval: 400,
+ scale:0.52,
+ 
+}
+);
 
-let Btn1 =  document.querySelector(".btn1");
-let Btn2 = document.querySelector(".btn2")
-let Btn3 = document.querySelector(".btn3")
-let Image1 = document.querySelector(".img1")
+// dark mode
+const darkSwitchIcon = document.querySelector("#dark-switch-icon");
+    const darkSwitch = document.querySelector("#dark-switch")
+    const darkText = document.querySelector("#dark-text")
+    const darkChangeText = document.querySelector("#dark-text-change")
+    const html = document.documentElement;
+    let isDarkMode = false;
+
+    // Switch theme function
+    const toggleTheme = () => {
+        isDarkMode = !isDarkMode;
+        switchTheme()
+    }
+
+    const toDark = () => {
+        darkSwitchIcon.classList.add('translate-x-full', 'rotate-[360deg]','bg-slate-50')
+        darkSwitchIcon.innerHTML = `<i class="fa-solid fa-moon text-slate-900"></i>`
+        // darkChangeText.innerText = 'Dark'
+        darkSwitch.classList.remove('bg-slate-800')
+        darkSwitch.classList.add('bg-slate-300',"border-2","border-slate-50")
+        localStorage.setItem('data-theme', 'dark')
+        html.classList.add('dark')
+        darkText.classList.add('-translate-x-7')
+        darkText.innerText = 'ON'
+    }
+
+    const toLight = () => {
+        darkSwitchIcon.classList.remove('translate-x-full', 'bg-slate-100')
+        // darkChangeText.innerText = 'Light'
+        darkSwitch.classList.remove('bg-slate-100')
+        darkSwitch.classList.add('bg-slate-800')
+        localStorage.removeItem('data-theme')
+        html.classList.remove('dark')
+        darkText.classList.remove('-translate-x-7')
+        darkText.innerText = 'FF'
+        darkSwitchIcon.innerHTML = `<i class="fa-regular fa-sun"></i>`
+        setTimeout(() => {
+            darkSwitchIcon.classList.remove('rotate-[360deg]')
+        }, 200)
+    }
+
+    const switchTheme = () => {
+        isDarkMode ? toDark() : toLight()
+        // or
+        // if (isDarkMode) {
+        //     toDark()
+        // } else {
+        //     toLight()
+        // }
+    }
 
 
-        Btn1.addEventListener("click",()=>{
-            Image1.style.marginLeft="";
-            Image1.style.transition="0.3s"
-         })
-         Btn2.addEventListener("click",()=>{
-            Image1.style.marginLeft="-31%";
-            Image1.style.transition="0.3s"
-         })
-         Btn3.addEventListener("click",()=>{
-            Image1.style.marginLeft="-65%";
-            Image1.style.transition="0.3s"
-         })
+    // If you do reload the webpage,
+    // doesn't change you choose theme.
+    // This `dataTheme` function save permentaly choose theme.
 
-    </script>
+    const dataTheme = localStorage.getItem('data-theme')
+
+    dataTheme === 'dark' ? toDark() : toLight();
+    // or
+    // if(dataTheme === 'dark') {
+    //     toDark()
+    // } else {
+    //     toLight()
+    // }
+
+</script>
+ <script src="../src/app.js"></script>
+
+
 </body>
 </html>
